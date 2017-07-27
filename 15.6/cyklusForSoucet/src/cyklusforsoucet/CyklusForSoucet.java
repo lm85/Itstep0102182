@@ -16,7 +16,7 @@ public class CyklusForSoucet {
      */
     public static void main(String[] args) {
         // jednoduchy cyklus - soucet jednoho cisla
-        System.out.println("soucet ci nasobeni na Ntou (0/1/2)? ");
+        System.out.println("soucet, nasobeni na Ntou, odmocnina (0/1/2)? ");
         Scanner scan3 = new Scanner(System.in);
         int jak = (int) scan3.nextInt();
         int vysledek = 1;
@@ -26,7 +26,7 @@ public class CyklusForSoucet {
         int co = (int) scan.nextInt();
         int kolik = co;
 
-        System.out.println("Zadej cele cislo - kolikrate jej secit samo sebou: ");
+        System.out.println("Zadej cele cislo se kterym se budou hodnoty pocitat: ");
         Scanner scan2 = new Scanner(System.in);
         int pom = (int) scan2.nextInt();
 
@@ -34,16 +34,15 @@ public class CyklusForSoucet {
             // rozhoduje zda secita hodnotu s cislem kolikrat pricist, nebo nasobi
             switch (jak) {
                 case 0:
-                    kolik = kolik + co;
+                    kolik += kolik; //jiny zapis co = co + kolik
                     break;
                 case 1:
-                    co = co * kolik;
+                    co *= kolik;   //jiny zapis co = co * kolik
                     break;
                 case 2:
                     if (i > 1) {
-                        vysledek = (int) Math.pow(co, 1.0 / pom); // potrebuji aby jedno z toho bylo double
-                        vysledek = Math.sqrt(i)
-                        break;  // mocninu
+                        vysledek = (int) Math.pow(co, 1.0 / pom); // odmocnina diky 1/x - potrebuji aby jedno z toho bylo double
+                        break;  
                     }
             }
 

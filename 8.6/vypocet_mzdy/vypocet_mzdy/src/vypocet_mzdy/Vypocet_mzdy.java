@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Necra
+ * @author Milan Z
  */
 public class Vypocet_mzdy {
 
@@ -26,64 +26,39 @@ public class Vypocet_mzdy {
         */
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Zadej vysi tve hrube mzdy");
-        int mujPlat = keyboard.nextInt();
+        float mujPlat = keyboard.nextFloat();
         
         float progresivniDan = 0;
                
         float dostanete = 0;
         //druhy napad
-        /*
-        if (mujPlat < 0) {
+        
+        if (mujPlat < 0 && !(mujPlat <= 1000)) {
             Scanner keyboard1 = new Scanner(System.in);
             System.out.println("Zadej vysi tve hrube mzdy");
-            mujPlat = keyboard.nextInt();   
+            mujPlat = keyboard.nextFloat();
         }
         
         if (mujPlat <= 10000) {
-            mujPlat = mujPlat - 1000; 
+            dostanete = mujPlat - 1000; 
+            progresivniDan = mujPlat;
         }
         
         if (mujPlat <= 20000 && mujPlat > 10000) {
-           progresivniDan = (float) (mujPlat - 1000 + mujPlat * 0.2);
+           progresivniDan = (float) (1000 + (mujPlat * 0.2));
+           dostanete = mujPlat - progresivniDan;
         }
         
-        if (mujPlat < 30000 && mujPlat > 20000) {
-            progresivniDan = (float) (mujPlat - 3000 + mujPlat * 0.3);
+        if (mujPlat <= 30000 && mujPlat > 20000) {
+            progresivniDan = (float) (3000 + (mujPlat * 0.3));
+            dostanete = mujPlat - progresivniDan;
         }
-        if (mujPlat < 40000 && mujPlat > 30000) {
-            progresivniDan = (float) (mujPlat - 6000 + mujPlat * 0.4);
+        if (mujPlat <= 40000 && mujPlat > 30000) {
+            progresivniDan = (float) (6000 + (mujPlat * 0.4));
+            dostanete = mujPlat - progresivniDan;
         }
         dostanete = mujPlat - progresivniDan;
         System.out.println("Progresivni dan je: " + progresivniDan + "\n" + "dostanete :" + dostanete);
-        */
-        
-        /*
-        //prvni napad slozite
-        int sandwich = mujPlat/10000;
-        System.out.println(sandwich);
-        switch(sandwich){
-            case 0: System.out.println("Lesser than 10.000");
-            // pro sichr    
-            if (mujPlat < 0) {
-            Scanner keyboard1 = new Scanner(System.in);
-            System.out.println("Zadej vysi tve hrube mzdy");
-            mujPlat = keyboard.nextInt();}; 
-            progresivniDan = (float) (mujPlat * 0.1);
-            
-            break;
-            case 1:
-                progresivniDan = (float) (mujPlat * 0.1); break;
-            case 2:
-                progresivniDan = (float) (1000 + mujPlat * 0.2); break;
-            case 3:
-                progresivniDan = (float) (3000 + mujPlat * 0.3); break;
-            case 4:
-                progresivniDan = (float) (6000 + mujPlat * 0.4); break;
-            //atd
-        }
-        dostanete = mujPlat - progresivniDan;
-        System.out.println("Progresivni dan je: " + progresivniDan + "\n" + "dostanete :" + dostanete);                    
-        */
     }
     
 }
