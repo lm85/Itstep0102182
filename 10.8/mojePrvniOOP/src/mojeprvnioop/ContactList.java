@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Milan Zlamal
  */
-public class ContactList {
+public class ContactList implements java.io.Serializable {
 
     ArrayList<Contact> data = new ArrayList<Contact>();
     

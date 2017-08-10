@@ -10,7 +10,7 @@ package mojeprvnioop;
  *
  * @author Milan Zlamal
  */
-public class Contact {
+public class Contact implements java.io.Serializable {
 
     
     private String name, surename, phone, adress;
