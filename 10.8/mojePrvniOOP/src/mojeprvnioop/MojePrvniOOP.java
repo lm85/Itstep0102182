@@ -22,6 +22,7 @@ public class MojePrvniOOP {
         Contact c;
         c = new Contact("ICH", "BIN", "65464654", "sfsdf645654");
         cl.data.add(c);
+        System.out.println(c);
     }
     
 }
