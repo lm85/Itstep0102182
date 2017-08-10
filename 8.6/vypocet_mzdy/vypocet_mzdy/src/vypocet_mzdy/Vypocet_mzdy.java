@@ -40,8 +40,7 @@ public class Vypocet_mzdy {
         }
         
         if (mujPlat <= 10000) {
-            dostanete = mujPlat - 1000; 
-            progresivniDan = mujPlat;
+            progresivniDan = mujPlat/10; 
         }
         
         if (mujPlat <= 20000 && mujPlat > 10000) {
