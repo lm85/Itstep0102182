@@ -16,4 +16,14 @@ public class ContactList {
 
     ArrayList<Contact> data = new ArrayList<Contact>();
     
+    @Override
+    public String toString() {
+    String dataElements = "";
+        for (Contact contact : data) {
+            dataElements += contact.toString() + " ";
+            
+        }
+        return "ContactList(" + dataElements + ")";
+    }
+    
 }
