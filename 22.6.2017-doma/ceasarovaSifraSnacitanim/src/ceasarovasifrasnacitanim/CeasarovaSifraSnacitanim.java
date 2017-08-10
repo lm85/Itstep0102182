@@ -6,6 +6,8 @@
 
 package ceasarovasifrasnacitanim;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Scanner;
 
 /**
@@ -19,22 +21,43 @@ public class CeasarovaSifraSnacitanim {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        
-        
-        String text = "abcdefghijklmnopqrstuvwxyz";
+        int [][] pole = new int [10][10];
         char[] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
             'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
             'w', 'x', 'y', 'z',' '};
-        int sifra=1;
+        String[] text1= new String[100];
+        String text;
+        try (BufferedReader br = new BufferedReader(new FileReader("..\\..\\input1.txt"))) {
+            String s;
+            int i=0; 
+            int j=0;
+            while ((s = br.readLine()) != null) {
+                // dodelat
+                text1[i] = s + s.split(";");
+                for (j = 0; j < 10; j++) {
+                    pole[i][j] = Integer.parseInt(text1[j]);
+                }
+                i++;
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         
-        int volba =0;
+        
+        //puvodni forma -  
+            //String text = "abcdefghijklmnopqrstuvwxyz";
+            //char[] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
+            //'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
+            //'w', 'x', 'y', 'z',' '};
+            int sifra=1;
+            int volba =0;
         
         
         
         Scanner in = new Scanner(System.in);
         System.out.println("Zadejte text který chcete zpracovat");
-        text = in.nextLine();
+        text = in.next();
         text = text.replaceAll("[^A-Za-z ]","");
         text = text.toLowerCase();
         char[] code=new char [text.length()];
