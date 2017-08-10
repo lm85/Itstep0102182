@@ -50,6 +50,7 @@ public class CeasarovaSifraSnacitanim {
             //char[] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
             //'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
             //'w', 'x', 'y', 'z',' '};
+            // pokud si dobre pamatuji co jsme delali s pavlem nize, tak by melo stacit zmenit text na text1
             int sifra=1;
             int volba =0;
         
