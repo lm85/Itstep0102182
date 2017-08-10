@@ -47,7 +47,7 @@ public class Contact {
     }
     
     public void setAdress(String adress) throws Exception{
-    if (!adress.matches("[a-zA-Z]")) {
+    if (!adress.matches("[a-zA-Z]* [a-zA-Z]* *[0-9]*")) {
                 throw new Exception("Chyba v zadani adresy");
             }
             this.adress = adress;

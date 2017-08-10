@@ -20,7 +20,7 @@ public class MojePrvniOOP {
 
         ContactList cl = new ContactList();
         Contact c = null;
-        c = new Contact("ICH", "BIN", "65464654", "Bsfsdf");
+        c = new Contact("ICH", "BIN", "65464654", "Bsfsdf ihikj 995");
         cl.data.add(c);
         System.out.println(c);
     }
