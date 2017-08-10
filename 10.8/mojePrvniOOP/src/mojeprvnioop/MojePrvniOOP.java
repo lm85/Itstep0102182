@@ -19,8 +19,8 @@ public class MojePrvniOOP {
         // potrebuji metodu abych k ni pristoupil
 
         ContactList cl = new ContactList();
-        Contact c;
-        c = new Contact("ICH", "BIN", "65464654", "sfsdf645654");
+        Contact c = null;
+        c = new Contact("ICH", "BIN", "65464654", "Bsfsdf");
         cl.data.add(c);
         System.out.println(c);
     }

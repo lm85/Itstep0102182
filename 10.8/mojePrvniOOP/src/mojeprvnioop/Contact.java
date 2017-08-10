@@ -32,7 +32,7 @@ public class Contact {
     
     public void setName(String name) throws Exception{
     if (!name.matches("[a-zA-Z]+")) {
-                throw new Exception("Chyba v zadani prijmeni");
+                throw new Exception("Chyba v zadani jmeno");
             }
             this.name = name;
     
@@ -47,8 +47,8 @@ public class Contact {
     }
     
     public void setAdress(String adress) throws Exception{
-    if (!adress.matches("[a-zA-Z]+[0-9]")) {
-                throw new Exception("Chyba v zadani prijmeni");
+    if (!adress.matches("[a-zA-Z]")) {
+                throw new Exception("Chyba v zadani adresy");
             }
             this.adress = adress;
     
