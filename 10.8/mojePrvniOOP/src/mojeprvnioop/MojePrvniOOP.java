@@ -37,7 +37,7 @@ public class MojePrvniOOP {
             System.out.println("DONE");
             
         } catch (IOException i) {
-            i.printStackTrace();
+            i.printStackTrace();  // Stack je od konce FIFO u heapu je to obracene 
         }
     }
     
