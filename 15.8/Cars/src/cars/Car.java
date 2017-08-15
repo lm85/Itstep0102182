@@ -59,6 +59,7 @@ public class Car {
     }
     
     
+    // @Override      tafy nechce, jinak prepisuje tu predchozi metodu
     protected void finalize() throws Throwable {
         try {
            counter--;
