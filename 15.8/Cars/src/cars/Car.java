@@ -15,6 +15,7 @@ public class Car {
     private static int counter = 0; //existence neni zavisla na instanci - nez postavim to auto tak je counter ostatni ne - zapouzdreny
     private int speed;
     private Engine engine;
+    private ServiceBook serviceBook;
 
     public Car(String manufacture, String modelName, int year, int speed, String engine) {
 
@@ -24,25 +25,26 @@ public class Car {
         counter++;
         this.speed = speed;
         this.engine = new Engine(engine);
+        this.serviceBook = new ServiceBook(this);
     }
 
-    public void setManufacture(String manufacture){
+    public void setManufacture(String manufacture) {
         this.manufacture = manufacture;
     }
 
-    public void setModelName(String modelName){
+    public void setModelName(String modelName) {
         this.modelName = modelName;
     }
 
-    public void setYear(Integer year){
+    public void setYear(Integer year) {
         this.year = year;
     }
 
-    public void setSpeed(Integer speed){
+    public void setSpeed(Integer speed) {
         this.speed = speed;
     }
 
-    public String getManufacture(String manufacture){
+    public String getManufacture(String manufacture) {
         return this.manufacture;
     }
 
@@ -50,22 +52,33 @@ public class Car {
         return this.modelName;
     }
 
-    public Integer getYear(int year){
+    public Integer getYear(int year) {
         return this.year;
     }
 
-    public Integer getSpeed(int speed){
+    public Integer getSpeed(int speed) {
         return this.speed;
     }
-    
-    
+
     // @Override      tafy nechce, jinak prepisuje tu predchozi metodu
     protected void finalize() throws Throwable {
         try {
-           counter--;
+            counter--;
         } finally {
             super.finalize();
         }
 
     }
+
+    @Override // prepisuji toString
+    public String toString() {
+
+        return "Manufacture: " + manufacture + "\n" + modelName + "Year: " + year + "Speed: " + speed + "Engine: " + this.engine.getType() + "Service records: " + this.serviceBook.getServiceRecords();
+
+    }
+
+    public void setServiceBook(ServiceBook serviceBook) {
+        this.serviceBook = serviceBook;
+    }
+
 }
