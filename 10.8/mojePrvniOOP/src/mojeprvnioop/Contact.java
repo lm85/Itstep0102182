@@ -38,9 +38,9 @@ public class Contact implements java.io.Serializable {
     
     }
     
-    public void setPhone(String phone) throws Exception{
-    if (!phone.matches("[0-9]+")) {
-                throw new Exception("Chyba v zadani phone");
+    public void setPhone(String phone) throws InvalidPhoneNumberException{
+    if (phone.length() != 9) {
+                throw new InvalidPhoneNumberException(1, "Chyba v zadani phone");
             }
             this.phone = phone;
     
