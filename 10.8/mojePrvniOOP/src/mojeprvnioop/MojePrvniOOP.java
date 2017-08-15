@@ -1,6 +1,6 @@
 /*
  * vytvoreni contact listu
- * vytvoreni me exceptiony
+ * vytvoreni me exceptiony za pomoci dedicnosti
  */
 
 package mojeprvnioop;
@@ -20,12 +20,27 @@ public class MojePrvniOOP {
      */
     public static void main(String[] args) throws Exception {
         // potrebuji metodu abych k ni pristoupil
-
-        ContactList cl = new ContactList();
-        Contact c = null;
+        
+        Contact c;
+        ContactList cl = null;
+        
+        try {
         c = new Contact("ICH", "BIN", "65464654", "Bsfsdf ihikj 995");
-        cl.data.add(c);
+        cl = new ContactList();
+        cl.data.add(c);        
+        
         System.out.println(cl);
+        
+        } catch (InvalidPhoneNumberException e) {
+            //e.printStackTrace();  // Stack je od konce FIFO u heapu je to obracene 
+            System.out.println(e.getMyErrorNumber() + " Wrong phone number" + e.getMessage());
+        }
+        
+         catch (Exception e) {
+            //e.printStackTrace();  // Stack je od konce FIFO u heapu je to obracene 
+            System.out.println(" Wrong contact" + e.getMessage());
+        }
+        
         
         try {
             FileOutputStream fileOut = new FileOutputStream("list.serializaed");
@@ -34,6 +49,7 @@ public class MojePrvniOOP {
             out.close();
             fileOut.close();
             System.out.println("DONE");
+        
             
         } catch (IOException i) {
             i.printStackTrace();  // Stack je od konce FIFO u heapu je to obracene 
