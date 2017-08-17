@@ -33,6 +33,8 @@ public class Cars {
 
         a = new Car("VW", "Beringo", 2017, 250, "diesel");
         
+        a.getServiceBook().addRecord("60 km");
+        System.out.println(a);
 
     }
 
