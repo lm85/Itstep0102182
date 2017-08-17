@@ -20,7 +20,7 @@ package cars;
 
 /**
  *
- * @author ASUS
+ * @author Milan Zlamal
  */
 public class Cars {
 
