@@ -73,7 +73,7 @@ public class Car {
     @Override // prepisuji toString
     public String toString() {
 
-        return "Manufacture: " + manufacture + "\n" + modelName + "Year: " + year + "Speed: " + speed + "Engine: " + this.engine.getType() + "Service records: " + this.serviceBook.getServiceRecords();
+        return "Manufacture: " + manufacture + "\n" + modelName + "Year: " + year +"\n"+ "Speed: " + speed +"\n"+ "Engine: " + this.engine.getType() +"\n"+ "Service records: " + this.serviceBook.getServiceRecords();
 
     }
 

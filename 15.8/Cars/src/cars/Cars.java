@@ -30,12 +30,15 @@ public class Cars {
     public static void main(String[] args) {
         // TODO code application logic here
         Car a = null;
-
+        Car b = null;
+        
         a = new Car("VW", "Beringo", 2017, 250, "diesel");
+        b = new Car("DMT", "TRIP", 2017, 500, "Benzin");
         
         a.getServiceBook().addRecord("60 km");
+        b.getServiceBook().addRecord("120 km");
         System.out.println(a);
-
+        
         
         
     }
