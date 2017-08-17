@@ -80,5 +80,9 @@ public class Car {
     public void setServiceBook(ServiceBook serviceBook) {
         this.serviceBook = serviceBook;
     }
-
+    
+    
+    public ServiceBook getServiceBook() {
+        return this.serviceBook;
+    }
 }
