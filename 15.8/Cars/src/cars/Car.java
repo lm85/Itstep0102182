@@ -52,11 +52,11 @@ public class Car {
         return this.modelName;
     }
 
-    public Integer getYear(int year) {
+    public Integer getYear() {
         return this.year;
     }
 
-    public Integer getSpeed(int speed) {
+    public int getSpeed() {
         return this.speed;
     }
 

@@ -42,10 +42,10 @@ public class Race {
     // vysledek seradi
         
     // pro celou kolekci cars - dle poctu v array listu
-        for (Car = tmpcar : cars) {  
+        for (Car  tmpcar : cars) {  
             results.add(
                     new RaceResults(
-                            tmpcar, new TimeSpan(
+                            tmpcar, new Timespan(
                                     this.lenght / tmpcar.getSpeed()
                             )
                     )
