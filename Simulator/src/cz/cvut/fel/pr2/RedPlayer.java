@@ -12,3 +12,5 @@ public class RedPlayer extends Player {
         return new Bet("5", 1); //always bet 1 gold 
     }
 }
+
+

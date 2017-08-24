@@ -17,7 +17,7 @@ public class Demo {
             sim.nextRound();
         } 
         
-        
+        // https://cw.fel.cvut.cz/wiki/courses/b0b36pjv/prednasky?&#objektove_orientovane_programovani
         
     }
 }
