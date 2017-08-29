@@ -24,9 +24,9 @@ public class Lode {
         Cruiser lodC;
         River reka = new River();
 
-        lodA = new Ship("Aljaska", 100, 50);
-        lodB = new BattleShip("Nicitel",50, 100, "valecna lod");
-        lodC = new Cruiser("Masakrator", 20, 200, "10");
+        lodA = new Ship("Kamikadze", 100, 50, 500, 10);
+        lodB = new BattleShip("Nicitel",50, 100, 100, 5000);
+        lodC = new Cruiser("Masakrator", 20, 200, 50, 5000);
 
       reka.addShip(lodA);
       reka.addShip(lodB);

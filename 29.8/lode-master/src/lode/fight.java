@@ -13,7 +13,15 @@ package lode;
  */
 public class fight {
     
+    public boolean (){
     
+    
+    
+    }
+    
+    
+    
+   
     
     
 }

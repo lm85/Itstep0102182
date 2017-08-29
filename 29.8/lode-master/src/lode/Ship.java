@@ -14,13 +14,26 @@ public class Ship {
     protected int speed;
     protected int size;
     protected String name;
+    protected int attack;
+    protected int defense;
 
-    public Ship(String name, int speed, int size) {
+    public Ship(String name, int speed, int size, int attack, int defense) {
         this.size = size;
         this.speed = speed;
         this.name = name;
+        this.attack = attack;
+        this.defense = defense;        
     }
 
+    public int getAttack(){
+    return this.attack;
+    }
+    
+    public int getDefense(){
+    return this.defense;
+    }
+    
+    
     public int getSpeed() {
         return this.speed;
     }
@@ -32,14 +45,22 @@ public class Ship {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
-
+    
     public void setSize(int size) {
         this.size = size;
     }
 
+    public void setAttack(int attack) {
+    this.attack = attack;
+    }
+    
+    public void setDefense(int defense) {
+    this.defense = defense;
+    }    
+    
     @Override
     public String toString() {
-        return "Jmeno lodi: " + this.name + "\nRychlost lodi: " + this.speed + ";" + "\nVelikost lodi: " + this.size + ";" + "\n";
+        return "Jmeno lodi: " + this.name + "\nRychlost lodi: " + this.speed + ";" + "\nVelikost lodi: " + this.size + ";" + "\nUtok lodi: " + this.attack + ";" + "\nUtok lodi: " + this.defense + ";";
     }
 
 }

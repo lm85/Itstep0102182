@@ -13,15 +13,14 @@ public class BattleShip extends Ship {
     
     String type;
     
-    public BattleShip(String name, int speed, int size, String type) {
-        super(name, speed, size);
-        this.type = type;
+    public BattleShip(String name, int speed, int size, int attack, int defense) {
+        super(name, speed, size, attack, defense);
     }
     
   
     @Override
     public String toString() {
-    return "Jmeno lodi: " + this.name + "\nRychlost lodi: " + this.speed + ";" + "\nVelikost lodi: " + this.size + ";" + "\nTyp lode: " + this.type + ";" + "\n";
+    return "Jmeno lodi: " + this.name + "\nRychlost lodi: " + this.speed + ";" + "\nVelikost lodi: " + this.size + ";" + "\nUtok lodi: " + this.attack + ";" + "\nUtok lodi: " + this.defense + ";";
     }
     
     

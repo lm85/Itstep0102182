@@ -13,14 +13,13 @@ public class Cruiser extends Ship {
     
     String nCannon;
     
-    public Cruiser (String name, int speed, int size, String nCannon) {
-    super(name, speed,size);
-    this.nCannon = nCannon;
+    public Cruiser (String name, int speed, int size, int attack, int defense) {
+    super(name, speed, size, attack, defense);
     }
     
     @Override
     public String toString() {
-    return "Jmeno lodi: " + this.name + "\nRychlost lodi: " + this.speed + ";" + "\nVelikost lodi: " + this.size + ";" + "\nPocet del: " + this.nCannon + ";" + "\n";
+    return "Jmeno lodi: " + this.name + "\nRychlost lodi: " + this.speed + ";" + "\nVelikost lodi: " + this.size + ";" + "\nUtok lodi: " + this.attack + ";" + "\nUtok lodi: " + this.defense + ";";
     }
     
     
