@@ -16,8 +16,9 @@ public class Ship {
     protected String name;
     protected int hp;
     protected int nCannon;
-
-    public Ship(String name, int speed, int size, int hp, int nCannon) {
+    protected boolean rescue;
+    
+    public Ship(String name, int speed, int size, int hp, int nCannon, int rescue) {
         this.size = size;
         this.speed = speed;
         this.name = name;
@@ -41,6 +42,14 @@ public class Ship {
         return this.nCannon;
     }
 
+    public boolean getRescue() {
+        return this.rescue;
+    }
+    
+    public void setRescue(boolean rescue) {
+        this.rescue = rescue;
+    }
+    
     public void setSpeed(int speed) {
         this.speed = speed;
     }
