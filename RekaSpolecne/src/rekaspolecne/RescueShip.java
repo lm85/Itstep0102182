@@ -5,15 +5,15 @@
  */
 package rekaspolecne;
 
-
- /**
- *
+/**
+ * Třída reprezentuje lodi, které budou schopné z river přesouvat do dock na upgrade
+   nebo z graveyard do dock na repair
  * @author DHA
  */
-public class TradeShip extends Ship {
+public class RescueShip extends Ship {
     private boolean rescue;
 
-    public TradeShip (String name, int speed, int size, int hp, int nCannon, boolean rescue) {
+    public RescueShip (String name, int speed, int size, int hp, int nCannon, boolean rescue) {   // David: tady je navíc boolean rescue!!!
         super (name, speed, size, hp, nCannon);
         this.rescue = rescue;
     }

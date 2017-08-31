@@ -13,7 +13,7 @@ package rekaspolecne;
 public class vyberLodi {
             
        Ship lodA = new Ship("Kamikadze", 100, 50, 500, 10, false);
-       TradeShip lodB = new TradeShip("Nicitel",50, 100, 100, 5000, false);
+       RescueShip lodB = new RescueShip("Nicitel",50, 100, 100, 5000, false);
         
         
   
