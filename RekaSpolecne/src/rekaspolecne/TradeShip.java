@@ -11,25 +11,29 @@ package rekaspolecne;
  * @author DHA
  */
 public class TradeShip extends Ship {
-    private int nosnost;
+    private boolean rescue;
 
-    public TradeShip (String jmeno, int odolnost, int nosnost) {
-        super (jmeno, odolnost);
-        this.nosnost = nosnost;
+    public TradeShip (String name, int speed, int size, int hp, int nCannon, boolean rescue) {
+        super (name, speed, size, hp, nCannon);
+        this.rescue = rescue;
     }
 
     /**
-     * @return the nosnost
+     * @return the rescue
      */
-    public int getNosnost() {
-        return nosnost;
+    public boolean getRescue() {
+        return rescue;
     }
 
     /**
-     * @param nosnost the nosnost to set
+     * @param rescue the rescue to set
      */
-    public void setNosnost(int nosnost) {
-        this.nosnost = nosnost;
+    public void setRescue(boolean Rescue) {
+        this.rescue = rescue;
     }
-   
+    
+    @Override
+    public String toString() {
+        return ("Loď " + name);
+    }
 }
