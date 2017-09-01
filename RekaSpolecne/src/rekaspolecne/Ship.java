@@ -42,11 +42,11 @@ public class Ship {
         this.nCannon = nCannon;
     }
 // nastavi team
-    public void setTeam(String team) {
+    public void setTeam(int team) {
         this.team = team;
     }
 // vrati team
-    public String getTeam() {
+    public int getTeam() {
         return this.team;
     }
 
