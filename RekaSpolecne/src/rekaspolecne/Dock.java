@@ -23,5 +23,5 @@ public class Dock {
         shipForRepair = river[indexForRepair];
         
     }
-    
+   
 }
