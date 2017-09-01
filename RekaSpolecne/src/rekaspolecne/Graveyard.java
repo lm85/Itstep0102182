@@ -13,27 +13,29 @@ import java.util.ArrayList;
  */
 public class Graveyard extends River {
     
-    ArrayList<Ship> hrbitov = new ArrayList<Ship>();
+    ArrayList<Ship> graveyard = new ArrayList<Ship>();
     
     
+    // pridani lodi do graveyardu - umre jde do graveyardu
     @Override
      public void addShip(Ship lod) {
-        hrbitov.add(lod);
+        graveyard.add(lod);
     }
-
+//odebrani lodi z graveyardu > jde do docku
     @Override
     public void removeShip(Ship lod) {
-        hrbitov.remove(lod);
+        graveyard.remove(lod);
     }
-
+// vrati velikost graveyardu
     @Override
     public int getSize() {
-        return hrbitov.size();
+        return graveyard.size();
     }
 
+    // vrati lod na danem indexu
     @Override
     public Ship getShip(int shipIndex) {
-        return hrbitov.get(shipIndex);
+        return graveyard.get(shipIndex);
     }
 
   
@@ -41,7 +43,7 @@ public class Graveyard extends River {
     @Override
     public String toString() {
         String dataElements = "";
-        for (Ship ship : hrbitov) {
+        for (Ship ship : graveyard) {
             dataElements += ship.toString() + " " + "\n";
         }
         return "River(" + dataElements + ")";

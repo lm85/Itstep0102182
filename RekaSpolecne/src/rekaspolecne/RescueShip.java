@@ -11,29 +11,25 @@ package rekaspolecne;
  * @author DHA
  */
 public class RescueShip extends Ship {
-    private boolean rescue;
+    private boolean workMode = false;
 
-    public RescueShip (String name, int speed, int size, int hp, int nCannon, boolean rescue) {   // David: tady je navíc boolean rescue!!!
-        super (name, speed, size, hp, nCannon);
-        this.rescue = rescue;
+    public RescueShip (String name, int hp, int nCannon, int team, boolean workMode) {   // objekt RescueShip
+        super (name, hp, nCannon, team); // dědíme z ship
+        this.workMode = workMode; // nový atribut
     }
 
-    /**
-     * @return the rescue
-     */
-    public boolean getRescue() {
-        return rescue;
+// zjistění WorkMode T/F
+    public boolean getWorkMode() {
+        return this.workMode;
     }
-
-    /**
-     * @param rescue the rescue to set
-     */
-    public void setRescue(boolean Rescue) {
-        this.rescue = rescue;
+// nastavení WorkMode T/F
+    public void setWorkMode(boolean workMode) {
+        this.workMode = workMode;
     }
     
     @Override
-    public String toString() {
-        return ("Loď " + name);
+   public String toString() {
+        return "Jmeno lodi: " + this.name + "Pocet zivotu: " + this.hp
+                + ";" + "\n" + "Pocet kanonu: " + this.nCannon + ";" + "\n" + "WorkMode: " + this.workMode;
     }
 }
