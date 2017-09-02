@@ -9,7 +9,7 @@ package rekaspolecne;
  *
  * @author Student
  */
-public class Ship {
+public class Ship implements Cloneable {
 
     /*
     UPRAVENO 1.9. SHIP ma pouze atributy ktere maji vschny ostatni lode, na ostatni pouzijte dedicnost!
@@ -56,4 +56,9 @@ public class Ship {
                 + ";" + "\n" + "Pocet kanonu: " + this.nCannon + ";" + "\n";
     }
 
+    /* David: pom. metoda na klonování */
+    public Object clone() throws CloneNotSupportedException {
+        Ship ship = (Ship)super.clone();
+        return ship;
+    }
 }
