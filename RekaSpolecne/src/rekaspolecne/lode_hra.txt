@@ -1,0 +1,56 @@
+/*
+nad hlavickou metody o cem to je a verze - nejak dat vedet zda je to hotove 1 jinak 0,x
+*/ 
+
+!dulezite promenne zminit zde!
+
+Co nebudeme stihat, dodelava pavel, cislo doda vilem
+        - pavel je debugger
+
+simulator - random lodi do tymu A a B
+          - musi spolu fightit
+            - metoda - na 2 flotily o parametr konstruktoru (naplnim reku) simulatoru je pocet flotil a lodi (2, 6)
+            - metoda play - hl. smycka dokud jedna strana nema potopene lode s omezenim na 10 0000 
+            - osetreno podminky - zda je naplneno, dokonano fight
+            - vyberou se nahodne 2 lode a ty jdou do souboje
+            - potopena jde do graveyardu
+                BSHp-- * BS Hp--
+                vylosovana lod nesmi mit workingMode boolean true = neni rescue
+                  nejdrive radek lod je zachranena do doku
+                  pak se opravi radek
+                Tradeship muze vygenerovat nahodne jednu shipu lod a tu grapne a da na 
+                (if grave -> repair if river -> upgrade, pokud sama sebe, jde do upgradu, pokud neni lod, tak hlaska ye neni co opravovat)
+                    - river - size, get size, get rescued 
+                Po oprave ji vyzvednu z doku a dam ji do riveru
+
+DO DATE - team Vilda 
+graveyard - vyhodnocovani workingMode - tahani z reky ci gravu je pred vyhodnocovanim boje
+          - lod umre a spadne do gravu a hp=0 
+          - kazde kolo se kontroluje grave pokud je zachranar mimo boj
+                    - pokud team ma v gravu vsechny zachranare nelze kontrolovat ci dovazet do docku 
+          - zachranar muze bojovat - nemuze zachranovat
+                                   - nemuze bojovat pri zachranovani
+                                   - workingMode boolean
+          - a kdyz se vylosuje tak jde do doku
+          
+dock - kontrola je prazdny a metodu na prirazeni do promenny == vlozeni lode z graveyardu ci reky
+     - dela lode
+     - upgraduje lod - cannon o +1
+     - repair z 0 hp na max hp
+     - zda je prazdny
+          - osetreni nelze vlozit dalsi - exception 
+
+Battleshipy budou potomkem Shipu 
+cruiser z shipu
+
+
+lod 
+    Name        [string]
+    Hp          [int]
+    Bouchacky   [int]
+    Team        [int]
+    WorkingMode [boolean]
+
+battleship Hp 3 dela 2
+rescueShip Hp 1 dela 0
+cruiser    Hp 2 dela 1                             
