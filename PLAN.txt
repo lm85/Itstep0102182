@@ -1,0 +1,30 @@
+#################
+PLan:
+
+posilam pozvanku do meho adresare s ukoly na gitu:
+https://github.com/Necraatall/java-skola/invitations
+
+stale mi tam chybi hamurabi - ta hra s kytkama a lidma, popripade jina samostatna hra - asi si neco vymislim viz nize s grafikou - nesmim vsak jit na to moc megalomansky jako s praci
+
+jinak zaujalo mne toto: 
+https://www.itnetwork.cz/java/soubory
+
+clanky 3 az co mne bude bavit (snad i nekde najdu jak se dela listener a odesilatel pro soap, jms a rest koverzaci, aby to melo vice presah do me prace to jms... uvidime, testy asi AMQ-ActiveMQ-pokud mi konfigurace a instalace nezabere tydny )
+
+po te mam v planu tyto:
+https://www.itnetwork.cz/java/testovani
+
+zatim mne nejvice tahne selenium se kterym i delam (zatim jen programuji v selenium ide)
+a samozrejme JMeter
+
+Mezi tim si strihnu nejakou hru z grafikou, protoze s ni mne to dost bavi a vzdy jsem byl spise pro front-end
+
+https://www.itnetwork.cz/java/pokrocile
+take parsovani html a remote method invocation
+tak, a to mam tak na par tydnu... uvidime jak co pujde
+jedna vec by mi mela zabrat max. jeden den - nejlepe za nej projet 2 tutose 
+radeji se asi budu venovat programku v kvantech - tj. nejakej tyden si nad nim sednout poradne a pak si dat oraz 
+- poradne tim myslim trebas celej vikend... 
+
+splneno - kurty/tutose:
+https://www.itnetwork.cz/java/testovani/uvod-do-testovani-softwaru-v-jave
