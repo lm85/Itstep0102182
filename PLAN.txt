@@ -26,5 +26,13 @@ jedna vec by mi mela zabrat max. jeden den - nejlepe za nej projet 2 tutose
 radeji se asi budu venovat programku v kvantech - tj. nejakej tyden si nad nim sednout poradne a pak si dat oraz 
 - poradne tim myslim trebas celej vikend... 
 
-splneno - kurty/tutose:
+********************************************************************************************************************************
+splneno - kurzy/tutose/cviceni:
+********************************************************************************************************************************
+cvini matka moudrosti:
 https://www.itnetwork.cz/java/testovani/uvod-do-testovani-softwaru-v-jave
+
+vytvoren muj prvni oracleSQl scriptik na vytvoreni csv: 
+     	Oracle_SQL_dotaz_s_csv_createm.sql
+      
+zacatek tut. junity testy - uceni po te bude nasledovat porovnani rozdilu junity a selenium ide test casu zkonvertovaneho do junity
