@@ -19,6 +19,7 @@ public class OpakovaniPodminek {
         for (int i = 11; i > 0; i--) {
             int cislo = 10;
             cislo = cislo - i; // nebo cislo-- nebo cislo -= 
+            System.out.print("tolik: " + (i-1));
         }
         
         for (int i =1; i < 4; i++) {
