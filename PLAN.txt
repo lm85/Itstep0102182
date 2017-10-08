@@ -37,6 +37,15 @@ vytvoren muj prvni oracleSQl scriptik na vytvoreni csv:
       
 zacatek tut. junity testy - uceni po te bude nasledovat porovnani rozdilu junity a selenium ide test casu zkonvertovaneho do junity
 
+zaklady neoop
+kalkulacka
+
+
 5. díl - Bojovník do arény
 tutorial:
 https://www.itnetwork.cz/java/oop/java-tutorial-arena-s-objektovymi-bojovniky
+
+2. dil zaklady oop
+https://www.itnetwork.cz/java/oop/java-tutorial-prvni-objektova-aplikace-hello-object-world
+
+
