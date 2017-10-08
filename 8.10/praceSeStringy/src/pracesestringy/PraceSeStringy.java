@@ -18,8 +18,16 @@ public class PraceSeStringy {
         /*
          string " C++ je %d KRÁT lepší! " zmenit na "Java je 3 krát lepší!"
          pouzit co nejvice retezcovych(stringovych) funkci
+        jednoduse to lze retezit:
+                s = s.trim().toLowerCase().replace("c++","Java");
+        
+        //true
+        System.out.println(s.startsWith("Java"));
+        //true
+        System.out.println(s.contains("Java"));
+        ...
          */
-
+        
         // definice stringu
         String s = " C++ je %d KRÁT lepší! ";
 
