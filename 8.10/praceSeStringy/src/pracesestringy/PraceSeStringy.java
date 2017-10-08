@@ -56,7 +56,6 @@ public class PraceSeStringy {
         // nahradim "%d" 3nasobkem poctu delky stringu
         s = s.replace("%d", String.valueOf(3 * (s.length())));
         
-        
         // vypisi vysledek
         System.out.println("Vysledek je: " + s);
 
