@@ -55,6 +55,13 @@ jmeno projektu: PraceSeStringy
 osvezeni podminek a definice vlastni Exceptiony
 jmeno projektu: PraceSpodminky
 
+8.10
+osvezeni cyklu - priprava na opakovani trideni
+jmeno projektu: opakovaniPodminek
+
+8.10
+osvezeni poli a sortu
+jmeno projektu: opakovanipole
 
 8.10
 5. díl - Bojovník do arény
