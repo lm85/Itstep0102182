@@ -52,6 +52,11 @@ stringove operace a osvezeni throwingu exceptionu bez catche jen z podminek
 jmeno projektu: PraceSeStringy
 
 8.10
+osvezeni podminek a definice vlastni Exceptiony
+jmeno projektu: PraceSpodminky
+
+
+8.10
 5. díl - Bojovník do arény
 k lepsimu pochopeni objektu a provazeb
 - dodelam celej oop tutorial abych ty pojmy dostal do krve
