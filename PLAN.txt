@@ -36,3 +36,7 @@ vytvoren muj prvni oracleSQl scriptik na vytvoreni csv:
      	Oracle_SQL_dotaz_s_csv_createm.sql
       
 zacatek tut. junity testy - uceni po te bude nasledovat porovnani rozdilu junity a selenium ide test casu zkonvertovaneho do junity
+
+5. díl - Bojovník do arény
+tutorial:
+https://www.itnetwork.cz/java/oop/java-tutorial-arena-s-objektovymi-bojovniky
