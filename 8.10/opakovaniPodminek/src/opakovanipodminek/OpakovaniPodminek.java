@@ -26,7 +26,8 @@ public class OpakovaniPodminek {
             String veta = "Toto je moje veta";
             System.out.println(veta + " " + "po " + i + ".");
         }
-
+        
+        // sachovnice
         for (int a = 1; a < 9; a++) {
             
             
