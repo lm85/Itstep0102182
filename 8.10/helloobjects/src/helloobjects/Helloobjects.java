@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package helloobjects;
 
 /**
@@ -16,11 +15,13 @@ public class Helloobjects {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Zdravic zdravic;
-        zdravic = new Zdravic();
-        zdravic.pozdrav();
-        
+
+        Zdravic zdravic = new Zdravic();
+        zdravic.text = "Ahoj uživateli";
+        zdravic.pozdrav("Karel");
+        zdravic.pozdrav("Petr");
+        zdravic.text = "Vítám tě tu programátore";
+        zdravic.pozdrav("Richard");
     }
-    
+
 }

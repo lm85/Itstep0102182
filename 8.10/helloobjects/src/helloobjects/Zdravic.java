@@ -6,13 +6,16 @@
 
 package helloobjects;
 
+
 /**
  *
  * @author Milan Z
  */
 public class Zdravic {
-    public void pozdrav(){
-        System.out.println("Hello object world!");
-    
-    }
-}
+        public String text;
+
+        public void pozdrav(String jmeno) {
+                System.out.printf("%s %s\n", text, jmeno);
+
+        }
+}        
