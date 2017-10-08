@@ -41,6 +41,11 @@ zacatek tut. junity testy - uceni po te bude nasledovat porovnani rozdilu junity
 8.10
 zaklady neoop
 kalkulacka - procviceni parsovani + try catch - jak hledat kontrolni exceptionu
+jmeno projektu: Kalkulacka
+
+8.10
+stringove operace a osvezeni throwingu exceptionu bez catche jen z podminek
+jmeno projektu: PraceSeStringy
 
 8.10
 5. díl - Bojovník do arény
