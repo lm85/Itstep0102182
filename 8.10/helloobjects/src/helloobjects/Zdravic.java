@@ -3,19 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package helloobjects;
 
-
 /**
- *
- * @author Milan Z
+ * @author Milan Z 
  */
 public class Zdravic {
-        public String text;
 
-        public void pozdrav(String jmeno) {
-                System.out.printf("%s %s\n", text, jmeno);
+    public String text;
 
-        }
-}        
+    /**
+     * Pozdraví uživatele textem pozdravu a jeho jménem
+     * @param jmeno Jméno uživatele
+     * @return Text s pozdravem
+     */
+    public void pozdrav(String jmeno) {
+        System.out.printf("%s %s\n", text, jmeno);
+
+    }
+}

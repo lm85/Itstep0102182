@@ -11,9 +11,7 @@ package helloobjects;
  */
 public class Helloobjects {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
 
         Zdravic zdravic = new Zdravic();
@@ -21,7 +19,8 @@ public class Helloobjects {
         zdravic.pozdrav("Karel");
         zdravic.pozdrav("Petr");
         zdravic.text = "Vítám tě tu programátore";
-        zdravic.pozdrav("Richard");
+        zdravic.pozdrav("Tester");
+
     }
 
 }
