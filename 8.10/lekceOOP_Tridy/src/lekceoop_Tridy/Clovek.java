@@ -1,7 +1,8 @@
 package lekceoop_Tridy;
 
 /*
-
+je ok, jen jsem revertoval soubor... nechtene jsem dal klavesovou zkratku 
+a refaktoroval name hlavni tridy, pak uz jen se snazil zachranit data
  */
 
 /**
