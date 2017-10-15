@@ -96,3 +96,31 @@ auto s metodamy naloz() a vyloz(), ktere meni velikost nakladu, naklad je reprez
 metoda vypis() vypise stav automobilu zkuste nalozit a vylozit matros 
 jmeno projektu: Nakladak
 
+15.10
+trida Zvire() bude mit vahu a rika ze umi ci neumi letat
+pouzit getter setter se zapouzdrenim, vraceni vahy v konstruktoru
+dle vahy pokud ma <= 9kg muze letat 
+metoda nakrm() prida vahu
+postup
+Zvire() atribut vaha vzacnost
+generovat konstruktor
+generovat getter setter
+dodejte metodu nakrm(kolik)
+zeptat zda umi/neumi letat - po prekrmeni neumi - zapouzdrit
+jmeno projektu: Zviratka
+
+15.10
+Dedicnost a polymorfysmus
+trida Programator vylepsujici tridu clovek
+@Override
+destructor
+jmeno projektu: zakladyoop_dedicnost
+
+15.10
+rozsirovani constructoru s polem
+jmeno projektu: zakladyoop_rozsireni_trid
+
+15.10
+cviko - nestihl - predevsim prepisovani
+jmeno projektu: Zviratka
+
