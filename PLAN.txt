@@ -76,5 +76,15 @@ jmeno projektu: TahovyBjJA
 https://www.itnetwork.cz/java/oop/java-tutorial-prvni-objektova-aplikace-hello-object-world
 jmeno projektu: helloobjects
 
+********************************************************************************************************************************
+15.10. opakovani oop java
+********************************************************************************************************************************
 
+15.10
+pokracovani JUnit k zakladum pridana metoda assertThat()
+jmeno projektu: Firsth_Junit_Kalkulacka
+     jmeno JUnity: KalkulackaTest 
 
+15.10
+zaklady oop 
+jmeno projektu: LekceOOP_Tridy
