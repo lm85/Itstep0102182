@@ -27,22 +27,7 @@ public class Zviratka {
      */
     public static void main(String[] args) {
         // 
-        
-        /*
-        jak resit main
-        Zvire[] zvirata = new Zvire[3];
-        
-        zvirata[0] = new Pes(3. true);
-        zvirata[1] = new Pes(1. true);
-        zvirata[2] = new Pes(3. true);
-        for(Zvire zvire:Zviratka){
-            System.out.println(zvire.vydejZvuk);
-        }
-        for(Zvire zvire:Zviratka){
-            System.out.println(zvire);
-        }
-                
-        */        
+        Zvire straka = new Zvire(5, 20,true);    
     }
     
 }
