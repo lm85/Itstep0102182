@@ -26,6 +26,8 @@ public class Zakladyoop_rozsireni_trid {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+
     }
     
 }
