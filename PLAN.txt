@@ -79,12 +79,20 @@ jmeno projektu: helloobjects
 ********************************************************************************************************************************
 15.10. opakovani oop java
 ********************************************************************************************************************************
+#prvni 2 nechtene ulozene do minuleho
 
-15.10
+8.10
 pokracovani JUnit k zakladum pridana metoda assertThat()
 jmeno projektu: Firsth_Junit_Kalkulacka
      jmeno JUnity: KalkulackaTest 
 
-15.10
-zaklady oop 
+8.10
+zaklady oop pomale ujednocovani pojmu trida, instance, metoda, public, static, void, private, zapouzdrovani, parametry, pretezovani a nepovinne parametry v nem, abstrakce, construktor, ziskavani hodnot private atributu - getter a setter
 jmeno projektu: LekceOOP_Tridy
+
+15.10
+auto s metodamy naloz() a vyloz(), ktere meni velikost nakladu, naklad je reprezentovan vnitrnim atributem
+* navic muzeme zavezt kontrolu nosnosti a dostatku nakladu pro vylozeni
+metoda vypis() vypise stav automobilu zkuste nalozit a vylozit matros 
+jmeno projektu: Nakladak
+
