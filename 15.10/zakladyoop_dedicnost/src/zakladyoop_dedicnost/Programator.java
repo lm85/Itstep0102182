@@ -3,6 +3,7 @@
  * extends vylepsuje cloveka
  * metoda Programator si bere jmeno, vek, jazyk
  * super 
+ * jen z jedne
  */
 
 package zakladyoop_dedicnost;

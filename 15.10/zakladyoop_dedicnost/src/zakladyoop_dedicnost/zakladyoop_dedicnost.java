@@ -20,7 +20,7 @@
  * toto je na nauceni tvorby tridy a prace s nimi
 
  vytvorime si cloveka - trida
- clovek ma hnede oci - dedicnost
+ clovek ma hnede oci - jen z jedne tridy - dedicnost
  polymorfismem mohu menit vlastnosti dedicne
  mohu pouzivat metody jinych objektu, ridit program - delegovani
  nemusim vedet jak to uvnitr funguje - jako treba pouziji Math.Pow, 
@@ -52,6 +52,12 @@
  volaji se vzdy v urcitou chvili
  dedime je od prapredka Object(maji vychozi implementaci)
  prepisujeme jejich vychozi chovani
+
+ destruktor:
+ opak constructoru, vola se kdyz je object odstranovan z pameti, neni prilis pouzivany
+ - nepouzivat na praci se zdroji - cokoliv co mi poskytuje data do programu
+ - neotvirejte si jej v constructoru
+ destruktor nema definovane jak a kdy se bude volat, dokonce se nemusi
  */
 
 package zakladyoop_dedicnost;
