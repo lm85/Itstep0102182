@@ -1,10 +1,12 @@
 package firsth_junit_kalkulacka;
 
-/**
+/*
  * Reprezentuje jednoduchou kalkulačku
  *
  * @author Milan ZLamal
  * a je to v prdeli... pozarni evakuace...
+ *
+ * Reprezentuje jednoduchou kalkulačku
  */
 public class Firsth_Junit_Kalkulacka {
 
