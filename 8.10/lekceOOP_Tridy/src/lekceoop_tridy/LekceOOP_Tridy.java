@@ -19,7 +19,9 @@ public class LekceOOP_Tridy {
         //vytvoreni instance - vytvarim noveho cloveka
         Clovek karel = new Clovek();
         karel.jmeno = "Karel";
-    
+        karel.pozdrav("Dobrý den");
+        karel.pozdrav();
+        
         //Tohle nejde! Proč? -- vek je privatni pro tridu Clovek
         //karel.vek = 42;
     
