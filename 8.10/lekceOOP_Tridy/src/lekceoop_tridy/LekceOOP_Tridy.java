@@ -33,8 +33,7 @@ public class LekceOOP_Tridy {
         // TODO code application logic here
     
         //vytvoreni instance - vytvarim noveho cloveka
-        Clovek karel = new Clovek();
-        karel.jmeno = "Karel";
+        Clovek karel = new Clovek("Karel", 42);
         karel.pozdrav("Dobrý den");
         karel.pozdrav();
         
