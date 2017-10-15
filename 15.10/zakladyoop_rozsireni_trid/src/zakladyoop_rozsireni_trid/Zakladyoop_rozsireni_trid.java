@@ -145,6 +145,9 @@
  * do promenne dam funkci a pak ji provolat jako funkci
  * mohu predavat jako parametr
  * mam kolekci lidi a chci je filtrovat lidi se jmenem s 5 znaky
+ *
+ * Udalost 
+ * ceka az se neco stane - pr. klikne na neco
  * 
  */
 
