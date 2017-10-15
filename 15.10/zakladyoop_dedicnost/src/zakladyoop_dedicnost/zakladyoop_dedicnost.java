@@ -91,6 +91,9 @@ public class zakladyoop_dedicnost {
         josef.pozdrav();
         System.out.println(josef.getJazyk());
         
+        //pouziti/volani to string z Cloveka
+        Clovek karel2 = new Clovek("Karel", 42);
+        System.out.println(karel2);
     }
     
 }

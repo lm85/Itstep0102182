@@ -91,4 +91,9 @@ public class Clovek {
         return vek;
     }
     
+    // vypisuje object
+    @Override
+    public String toString(){
+    return jmeno + ", " + vek;
+    }
 }
