@@ -11,6 +11,9 @@ generovat getter setter
 dodejte metodu nakrm(kolik)
 
 zeptat zda umi/neumi letat - po prekrmeni neumi - zapouzdrit
+
+navrh ukolu
+osetrit s vyjimkama, dat nejake abstrakty, pak nevraci prazdne stringy
 */
 
 package zviratka;
