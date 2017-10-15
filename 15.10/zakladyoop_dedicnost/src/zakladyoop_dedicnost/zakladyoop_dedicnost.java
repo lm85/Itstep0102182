@@ -15,30 +15,48 @@
  * na tridy, ktere od ni dedi a na tridy ve stejnem balicku i package
  * (default) - bez niceho (vychozi)
  * pristup je omezen na tridu, ktera dany prvek obsahuje a na tridy ve stejnem balicku
- */
-/*
+ *
+ *
  * toto je na nauceni tvorby tridy a prace s nimi
 
-vytvorime si cloveka - trida
-clovek ma hnede oci - dedicnost
-polymorfismem mohu menit vlastnosti dedicne
-mohu pouzivat metody jinych objektu, ridit program - delegovani
-nemusim vedet jak to uvnitr funguje - jako treba pouziji Math.Pow, 
-nechci vedet jak, ale jen ze mi to vrati toto - abstrakce
-vlastnosti obektu (promenne) co ma v sobe - atributy
-jsou to funkce co ten objekt dokaze - metody
-zapouzdreni - modifikatory pristupu, napr public a private - zapouzdreni
-instance - parafrazuji konkretni objekty s kterymi pracuji, 
-lisi se atributama - hodnotama atributu ci datama
-pretizene metody viz trida Clovek a nepovinne parametry 
-Konstruktor - this pouzijeme pro rozliseni atributu a parametru metody
-jinak se vola v mainu
-getter a setter - metoda ktera nam pomaha brat hodnotu z privite atributu
+ vytvorime si cloveka - trida
+ clovek ma hnede oci - dedicnost
+ polymorfismem mohu menit vlastnosti dedicne
+ mohu pouzivat metody jinych objektu, ridit program - delegovani
+ nemusim vedet jak to uvnitr funguje - jako treba pouziji Math.Pow, 
+ nechci vedet jak, ale jen ze mi to vrati toto - abstrakce
+ vlastnosti obektu (promenne) co ma v sobe - atributy
+ jsou to funkce co ten objekt dokaze - metody
+ zapouzdreni - modifikatory pristupu, napr public a private - zapouzdreni
+ instance - parafrazuji konkretni objekty s kterymi pracuji, 
+ lisi se atributama - hodnotama atributu ci datama
+ pretizene metody viz trida Clovek a nepovinne parametry 
+ Konstruktor - this pouzijeme pro rozliseni atributu a parametru metody
+ jinak se vola v mainu
+ getter a setter - metoda ktera nam pomaha brat hodnotu z privite atributu
+
+ Polymorfismus
+ tam kde cekam instanci tridy, tak dodam potomka, 
+ nemohu ale pouzit to co nema otcovska trida 
+ pokud jsem nejakou prepsal, pak bude prepsana
+ jako v metode pozdrav()
+ 
+ definice:
+ umoznuje definovat ruzne chovani instanci, 
+ ale zachazet s nimi pod jednim spolecnym rozhranim
+ 
+ Metody spolecne pro vsechny objekty ci reakce na udalosti:
+ instance (konstruktor)
+ prevod na text
+ porovnani
+ volaji se vzdy v urcitou chvili
+ dedime je od prapredka Object(maji vychozi implementaci)
+ prepisujeme jejich vychozi chovani
  */
 
 package zakladyoop_dedicnost;
 
-/**
+/*
  *
  * @author Milan Z
  */
@@ -54,6 +72,9 @@ public class zakladyoop_dedicnost {
         Clovek karel = new Clovek("Karel", 42);
         karel.pozdrav("Dobrý den");
         karel.pozdrav();
+        
+        // sout vypise nazev hlavni tridy a nizsi uzite
+        //System.out.println(karel);
         
         //Tohle nejde! Proč? -- vek je privatni pro tridu Clovek
         //karel.vek = 42;
