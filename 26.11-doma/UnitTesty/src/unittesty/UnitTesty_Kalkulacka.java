@@ -1,7 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * jUNITY tutorial
+ * prvni cast:
+ * https://www.itnetwork.cz/java/testovani/testovani-v-jave-prvni-unit-test-v-junit
+ * druha cast:
+ * https://www.itnetwork.cz/java/testovani/testovani-v-jave-hamcrest-junit-testrule-a-best-practices
+ * V minulé lekci online kurzu o testování software v Javě 
+ * jsme si uvedli úplné základy JUnit a napsali první unit test. 
+ * V dnešní lekci unit testy dokončíme, uvedeme si knihovnu Hamcrest, 
+ * která je nově podporována JUnit a zásadně mění způsob, jakým píšeme asserce. 
+ * Dále se budeme věnovat pravidlům (TestRules) a na závěr zmíníme 
+ * best practices pro psaní jednotkových testů.
  */
 package unittesty;
 
