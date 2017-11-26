@@ -67,8 +67,7 @@ public class Kalkulacka {
     public double vydel(double a, double b) {
         if (b == 0)
             throw new IllegalArgumentException("Nelze dělit nulou!");
-        if (a/b <= -3.4e38 )
-            throw new IllegalArgumentException("Zadali jste prilis vysoke cislo k deleni");
+
         return a / b;
     }
     

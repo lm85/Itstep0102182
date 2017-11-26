@@ -121,14 +121,8 @@ public class KalkulackaTest {
 
     // test metoda
     @Test(expected = IllegalArgumentException.class)
-    public void deleniBufferVyjimka() {
-        kalkulacka.vydel(1, 656.05);
-    }
-
-    // test metoda
-    @Test(expected = IllegalArgumentException.class)
     public void nasobeniBufferVyjimka() {
-        kalkulacka.vydel(654654654, 65465465);
+        kalkulacka.vynasob(654654654, 65465465);
     }
 
 
