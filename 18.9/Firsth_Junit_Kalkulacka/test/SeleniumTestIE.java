@@ -1,40 +1,38 @@
+
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import static junit.framework.TestCase.assertEquals;
 import org.openqa.selenium.WebElement;
+import static junit.framework.TestCase.assertEquals;
 
 /**
- *
- * @author ASUS
+ * dodelat
+ * @author Milan ZLamal
  */
-public class SeleniumTest {
-  private static final String URL = "http://localhost:8080/JSFKalkulacka/";
+public class SeleniumTestIE {
+
+    private static final String URL = "http://localhost:8080/JSFKalkulacka/";
     private static final int TIMEOUT = 10;
 
-    private WebDriver driver;
-    
+    public WebDriver driver;
+
     @Before
-    public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver2.33_win32.exe");
-        driver = new ChromeDriver();
+    public void setUp() {
+        System.out.println("*******IE DRIVER*******");
+        System.out.println("launching IE browser");
+        System.setProperty("webdriver.ie.driver", "resources/IEDriverServer_3.6.0_win32.exe");
+        driver = new InternetExplorerDriver();
         driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
-    }
-    
-    @After
-    public void tearDown() {
-        driver.quit();
+        driver.manage().window().maximize();
+
     }
 
-    /**
-     * Test of vypocitej method, of class KalkulackaBean.
-     */
     @Test
     public void testVypocitej() {
         driver.get(URL);
@@ -51,17 +49,11 @@ public class SeleniumTest {
         assertEquals("2.0", driver.findElement(By.id("vysledek")).getText());
     }
 
-    /**
-     * Test of vypocitej method, of class KalkulackaBean.
-     */
-    /*
-    @Test
-    public void testVypocitejObject() {
-        driver.get(URL);
-        driver.manage().deleteAllCookies();
-        KalkulackaPage kalkulackaPage = new KalkulackaPage(driver);
-        kalkulackaPage.setCislo1(1).setCislo2(1).setOperace("+").vypocitej();
-        assertEquals("2.0", driver.findElement(By.id("vysledek")).getText());
-    }  
-    */
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            System.out.println("Closing IE browser");
+            driver.quit();
+        }
+    }
 }
