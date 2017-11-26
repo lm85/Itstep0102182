@@ -118,6 +118,30 @@ jmeno projektu: zakladyoop_dedicnost
 
 15.10
 rozsirovani constructoru s polem
+vysvetleni co je try catch a pravidla
+abstraktni trida
+vyctove typy
+static
+const
+vyjimky
+final - zakazat prepisovani a dedicnost
+PAMET
+heap
+referencni datove typy
+dynamicka sprava pameti
+prazdna reference
+predani reference v parametrech
+porovnani objektu equals a ==
+klonovani
+kolekce
+seznamy
+jednosmerny spojovy seznam - array s lifo branim
+obousmerny - bere fifo
+Slovniky/Mapy
+Mnoziny
+pro hromadne prace s datama funkcionalne programovat
+Generika
+Funkcionalni programovani
 jmeno projektu: zakladyoop_rozsireni_trid
 
 15.10
