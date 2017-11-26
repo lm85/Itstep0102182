@@ -51,7 +51,11 @@ public class Kalkulacka {
      * @return Součin 2 čísel
      */
     public double vynasob(double a, double b) {
+        if (a * b > 2147483647)
+            throw new IllegalArgumentException("Zadali jste prilis vysoke cislo k nasobeni");
+        
         return a * b;
+
     }
     
     /**
@@ -63,6 +67,8 @@ public class Kalkulacka {
     public double vydel(double a, double b) {
         if (b == 0)
             throw new IllegalArgumentException("Nelze dělit nulou!");
+        if (a/b <= -3.4e38 )
+            throw new IllegalArgumentException("Zadali jste prilis vysoke cislo k deleni");
         return a / b;
     }
     
