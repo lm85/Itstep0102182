@@ -13,7 +13,6 @@
  */
 
 import firsth_junit_kalkulacka.Firsth_Junit_Kalkulacka;
-import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.*;
 import org.junit.Before;
