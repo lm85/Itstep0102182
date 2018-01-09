@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Graveyard extends River {
     
-    ArrayList<Ship> graveyard = new ArrayList<Ship>();
+    ArrayList<Ship> graveyard = new ArrayList<>();
     
     
     // pridani lodi do graveyardu - umre jde do graveyardu
@@ -43,9 +43,7 @@ public class Graveyard extends River {
     @Override
     public String toString() {
         String dataElements = "";
-        for (Ship ship : graveyard) {
-            dataElements += ship.toString() + " " + "\n";
-        }
+        dataElements = graveyard.stream().map((ship) -> ship.toString() + " " + "\n").reduce(dataElements, String::concat);
         return "River(" + dataElements + ")";
 
     }

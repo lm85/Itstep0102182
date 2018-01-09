@@ -59,6 +59,14 @@ public class Ship implements Cloneable {
     }
 
     /* David: pom. metoda na klonování */
+
+    /**
+     *
+     * @return
+     * @throws CloneNotSupportedException
+     */
+
+    @Override
     public Object clone() throws CloneNotSupportedException {
         Ship ship = (Ship)super.clone();
         return ship;

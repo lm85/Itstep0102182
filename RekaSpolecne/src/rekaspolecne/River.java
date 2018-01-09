@@ -16,7 +16,7 @@ public class River {
 
   
   
-    protected ArrayList<Ship> reka = new ArrayList<Ship>();
+    protected ArrayList<Ship> reka = new ArrayList<>();
 
     public void addShip(Ship lod) {
         reka.add(lod);
@@ -39,9 +39,7 @@ public class River {
     @Override
     public String toString() {
         String dataElements = "";
-        for (Ship ship : reka) {
-            dataElements += ship.toString() + " " + "\n";
-        }
+        dataElements = reka.stream().map((ship) -> ship.toString() + " " + "\n").reduce(dataElements, String::concat);
         return "River(" + dataElements + ")";
 
     }

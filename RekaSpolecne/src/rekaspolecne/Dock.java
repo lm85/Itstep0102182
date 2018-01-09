@@ -45,11 +45,7 @@ public class Dock {
     /* metoda zkontroluje a vrátí hodnotu true, pokud je instance typu Dock 
        prázdná (tj. null) */
     public boolean isEmpty () {
-        if (this.shipForDocking ==null) {
-            return true;  
-        } else {
-            return false; 
-        }    
+        return this.shipForDocking ==null;    
     }
     
 
@@ -57,7 +53,9 @@ public class Dock {
      * getter 
      * pozor! tento getter vyjímá objekt Ship z doku - tj. dock je pak volný (null)
      * @return the shipForDocking
+     * @throws java.lang.CloneNotSupportedException
      */
+    
     public Ship getShipForDocking() throws CloneNotSupportedException {
         Ship pom = (Ship)shipForDocking.clone();
         this.shipForDocking = null;
@@ -67,6 +65,7 @@ public class Dock {
     /**
      * setter
      * @param shipForDocking the shipForDocking to set
+     * @throws java.lang.Exception
      */
     public void setShipForDocking(Ship shipForDocking) throws Exception {
         if (this.isEmpty()) {
