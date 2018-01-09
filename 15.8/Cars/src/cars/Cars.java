@@ -38,7 +38,7 @@ public class Cars {
         a.getServiceBook().addRecord("60 km");
         b.getServiceBook().addRecord("120 km");
         System.out.println(a);
-        
+        System.out.println(b);
         
         
     }
