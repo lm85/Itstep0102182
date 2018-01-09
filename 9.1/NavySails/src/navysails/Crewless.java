@@ -13,25 +13,30 @@ import java.util.ArrayList;
  */
 public class Crewless extends Mare{
 
+    
+    // dle rady netbeanu??? je potreba?
     private static Sails get(int shipIndex) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("get shipIndex Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private static int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("size Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private static void remove(Sails lod) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("remove lod Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private static void add(Sails lod) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("addlod Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private static Object stream() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Object stream Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    // dle rady netbeanu??? je potreba?
+    
+    
     ArrayList<Sails> crewless = new ArrayList<>();
     
     
