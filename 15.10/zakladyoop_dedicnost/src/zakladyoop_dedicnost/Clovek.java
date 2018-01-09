@@ -49,6 +49,7 @@ public class Clovek {
      }
      ***
      */
+    
     // konstruktor
     public Clovek(String jmeno, int vek) {
         //this pouzijeme pro rozliseni atributu a parametru metody
