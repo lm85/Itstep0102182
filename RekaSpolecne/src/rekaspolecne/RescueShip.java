@@ -8,7 +8,7 @@ package rekaspolecne;
 /**
  * Třída reprezentuje lodi, které budou schopné z river přesouvat do dock na upgrade
    nebo z graveyard do dock na repair
- * @author DHA -> Vilda?
+ * @author DHA - > Vilda?
  */
 public class RescueShip extends Ship {
     private boolean workMode = false;
