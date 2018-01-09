@@ -7,13 +7,15 @@ package rekaspolecne;
 
 /**
  *
- * @author Student
+ * @author Milan ZLamal
  */
 public class Ship implements Cloneable {
 
     /*
     UPRAVENO 1.9. SHIP ma pouze atributy ktere maji vschny ostatni lode, na ostatni pouzijte dedicnost!
      */
+    
+    
     protected String name;
     protected int hp;
     protected int nCannon;
