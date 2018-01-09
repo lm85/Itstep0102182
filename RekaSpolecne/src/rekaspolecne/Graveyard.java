@@ -21,12 +21,12 @@ public class Graveyard extends River {
      public void addShip(Ship lod) {
         graveyard.add(lod);
     }
-//odebrani lodi z graveyardu > jde do docku
+    //odebrani lodi z graveyardu > jde do docku
     @Override
     public void removeShip(Ship lod) {
         graveyard.remove(lod);
     }
-// vrati velikost graveyardu
+    // vrati velikost graveyardu
     @Override
     public int getSize() {
         return graveyard.size();
