@@ -148,3 +148,9 @@ jmeno projektu: zakladyoop_rozsireni_trid
 cviko - nestihl - predevsim prepisovani
 jmeno projektu: Zviratka
 
+9-10.1 rano
+nejde mi dodelat lode i kdyz jsem se snazil, tak to proste skripe na tom ze je to jen z 10 procent. 
+proto jsem si radeji vzal arenu z itnetworku co jsem delal a pridal novou klassu skritka, ktery skodi ci leci kohokoliv kazde kolo random. Nelze jej svini zabit. 
+mel jsem pak problem vystopovat zpusob posilani zprav - print, pridal jsem k tomu vykreslovani, dalsi je swing a vykresleni do do okna. 
+
+
