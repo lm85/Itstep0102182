@@ -21,7 +21,7 @@ public class Lev extends Bojovnik{
     }
 
      /**
-     * Provede útok na soupeře
+     * Provede útok na soupeře rrrrr
      * @param souper Soupeř bojovník
      */
     @Override
