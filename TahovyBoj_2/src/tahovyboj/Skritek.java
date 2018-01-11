@@ -6,7 +6,7 @@ package tahovyboj;
 
 /**
  *
- * @author ASUS
+ * @author Milan ZLamal
  */
 public class Skritek {
 
@@ -63,10 +63,11 @@ public class Skritek {
     }
 
     /**
-     * Provede útok/léčéní na soupeře
+     * Skritek - Provede útok/léčéní na soupeře
      *
-     * @param souper Soupeř bojovník
-     * @param kostka Instance hrací kostky
+     * @param Bojovnik souper - Soupeř bojovník
+     * @param Kostka kostka - Instance hrací kostky
+     * 
      */
     public void utoc(Bojovnik souper, Kostka kostka) {
         /**

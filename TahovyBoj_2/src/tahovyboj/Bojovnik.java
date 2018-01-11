@@ -54,6 +54,7 @@ public class Bojovnik {
     /**
      *  Provede útok na soupeře
      * @param souper Soupeř bojovník
+     * 
      */
     public void utoc(Bojovnik souper)
     {

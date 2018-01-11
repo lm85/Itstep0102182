@@ -113,11 +113,11 @@ public class Arena {
     private void vypisBojovnika(Bojovnik b) {
         System.out.println(b);
         System.out.print("Zivot: ");
-        System.out.println(b.grafickyZivot());
+        System.out.println(b.grafickyZivot());  // zobrazení množství životů
 
         if (b instanceof Mag) {
             System.out.print("Mana:  ");
-            System.out.println(((Mag) b).grafickaMana());
+            System.out.println(((Mag) b).grafickaMana());   // zobrazení množství many
         }
     }
 

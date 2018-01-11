@@ -14,7 +14,7 @@
  *	Kód můžete upravovat jak chcete, jen zmiňte odkaz 
  *	na www.devbook.cz :-)  - it network
  *      pridan skritek zaskodik na ktereho nemohou utocit
- *      ten se rozhoduje pri kazdem utoku bojovnika ktereho vyleci ci podkopne
+ *      ten se rozhoduje pri kazdem utoku bojovnika zda ho vyleci ci podkopne
  */
 
 package tahovyboj;
@@ -31,5 +31,6 @@ public class TahovyBoj {
         Arena arena = new Arena(zalgoren, gandalf, rumpleCimperCamper, kostka);
         // zápas
         arena.zapas();
+        
     }
 }
