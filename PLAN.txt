@@ -154,3 +154,10 @@ proto jsem si radeji vzal arenu z itnetworku co jsem delal a pridal novou klassu
 mel jsem pak problem vystopovat zpusob posilani zprav - print, pridal jsem k tomu vykreslovani, dalsi je swing a vykresleni do do okna. 
 Zitra ci pozitri na cviku si tam pridelam nejakou Classu co bude extendovat jinou.
 
+11.1 skola
+udelali jsme si zaklad lodi
+chybi dodelat tahovy boj a chybi dodelat rozdeleni do flotil dle zadani kolik ma mit lodi - asi resit + 4 - mame 4 zakladni typy a pak uz se asi budou pridavat jen krizniky 1 a 2
+dostali jsme ukol hamurabiho... 
+posilam tahovy boj na kontrolu - neco je tam blbe - nezachovava si hodnotu promenne... 
+
+
