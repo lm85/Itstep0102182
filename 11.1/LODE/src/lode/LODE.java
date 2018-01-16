@@ -16,7 +16,7 @@ public class LODE {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+               
         Ship santa_maria = new Ship("Santa Maria");
 
         santa_maria.getHp();
@@ -34,8 +34,7 @@ public class LODE {
         Diplomatico Diplomat = new Diplomatico("Usama bin Ladin");
         Rescueship Zachranar = new Rescueship("Zachranar");
         
-        Flotila Dragouni = new Flotila("Dragouni"); 
-        Flotila Navy = new Flotila("Navy"); 
+        
         
     }
 

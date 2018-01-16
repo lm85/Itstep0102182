@@ -13,7 +13,8 @@ public class Ship {
 
     protected String name;
     protected int hp = 1;
-
+    protected int shipIndex;
+    
     public Ship(String name) {
         this.name = name;
     }
