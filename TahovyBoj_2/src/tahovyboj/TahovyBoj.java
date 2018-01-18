@@ -25,9 +25,9 @@ public class TahovyBoj {
         
         // vytvoření objektů
         Kostka kostka = new Kostka(10);
+        Skritek rumpleCimperCamper = new Skritek("RumpleCimperCamper", 60, 20, 30, kostka);        
         Bojovnik zalgoren = new Bojovnik("Zalgoren", 100, 20, 10, kostka);
         Mag gandalf = new Mag("Gandalf", 60, 15, 12, kostka, 30, 45);
-        Skritek rumpleCimperCamper = new Skritek("RumpleCimperCamper", 60, 20, 30, kostka);
         Arena arena = new Arena(zalgoren, gandalf, rumpleCimperCamper, kostka);
         // zápas
         arena.zapas();

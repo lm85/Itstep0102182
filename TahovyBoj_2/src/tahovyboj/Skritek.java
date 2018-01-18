@@ -4,6 +4,9 @@
  */
 package tahovyboj;
 
+import java.util.Random;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Milan ZLamal
@@ -40,10 +43,21 @@ public class Skritek {
     protected String zprava;
     /**
      * Náhodný faktor pro rozhodování skřítka
+     * 
+     * rozhodnuti je promenna ktera nese hodnotu a pouziji ji v podminkach
+     * min a max je minimalni a maximalni rozsah
      */
-    double rozhodnuti = Math.random();
+    int rozhodnuti;
+    
+    public static int random_int(int Min, int Max) {
+        /*
+        * Nahodně generuje číslo mezi 1 a 2
+        */
+        return (int) (Math.random() * (Max - Min - 1)) + Min;
+    }
 
-
+    
+    
     /**
      * Vytvoří novou instanci bojovníka
      *
@@ -67,60 +81,72 @@ public class Skritek {
      *
      * @param Bojovnik souper - Soupeř bojovník
      * @param Kostka kostka - Instance hrací kostky
-     * 
+     *
      */
     public void utoc(Bojovnik souper, Kostka kostka) {
         /**
          * zde se rozhoduje co skřítek udělá pokud dostal kašičku, tak vás
          * vyléčí
          */
-        int uder = 0;
-        if (rozhodnuti==1) {
+        int uder = 9;
+        if (rozhodnuti == 1) {
             /**
-             * Probehne utok
+             * Proběhne útok - skřítek zaútočí/léčí cíl
              */
             uder = utok + kostka.hod();
-            nastavZpravu(String.format(this.jmeno + "útočí s úderem za %s hp", jmeno, uder));
-            zprava = String.format("%s utrpěl poškození %s hp", jmeno, uder);
+            nastavZpravu(String.format("%s útočí úderem za %s hp", jmeno, uder));
+            //zprava = String.format("BOJOVNIK " + souper.jmeno + " utrpěl poškození %s hp", jmeno, uder);    // ke kontrole a zkousky
             souper.branSe(uder);
         } else /**
          * Skřítek tě vyléčí
          */
         {
-            if (zivot + kostka.hod() <= maxZivot) {
-                uder = utok - kostka.hod();
-                nastavZpravu(String.format("%s léčí za %s hp", jmeno, uder));
-                zprava = String.format("%s si vyléčil poškození %s hp", jmeno, uder);
-            } else {
-                zivot = maxZivot;
-                nastavZpravu(String.format("%s léčí za %s hp", jmeno, uder));
+            if (rozhodnuti == 2) {
+                if (zivot + kostka.hod() <= souper.maxZivot) {
+                    uder = utok - kostka.hod();
+
+                    nastavZpravu(String.format("%s léčí za %s hp", jmeno, uder));
+                    //zprava = String.format("BOJOVNIK " + souper.jmeno + " si vyléčil poškození %s hp", jmeno, uder);    // ke kontrole a zkousky
+                } else {
+                    zivot = maxZivot;
+                    nastavZpravu(String.format("%s léčí za %s hp", jmeno, uder));
+                    //zprava = String.format("BOJOVNIK " + souper.jmeno + " vyléčil za" + (souper.maxZivot-uder) + " hp", jmeno, uder);    // ke kontrole a zkousky
+                }
             }
         }
     }
-
-protected void nastavZpravu(String zprava)
-    {
+    /*
+    * Nastaví zprávu pro pozdější využití classou Arena
+    * ta je pak používana vratPosledniZpravu() nize
+    *
+    * @param zde je parametrem zpráva zadaná výše
+    */
+    protected void nastavZpravu(String zprava) {
         this.zprava = zprava;
     }
 
     /**
      * Vrátí poslední zprávu o útoku nebo obraně
+     *
      * @return Poslední zpráva o útoku nebo obraně
      */
-    public String vratPosledniZpravu()
-    {
+    public String vratPosledniZpravu() {
         return zprava;
     }
 
     /**
      * Vrací textovou reprezentaci bojovníka
+     *
      * @return Textová reprezentace bojovníka
      */
     @Override
-    public String toString()
-    {
+    public String toString() {
         return jmeno;
     }
+
+
+
+
 
 
 }

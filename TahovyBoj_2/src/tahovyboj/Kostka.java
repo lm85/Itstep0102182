@@ -63,10 +63,7 @@ public class Kostka
     }
 
     
-    /**Pokus */
-    public Random getRandom() {
-        return random;
-    }
+
 
     /**
      * Vrací textovou reprezentaci kostky

@@ -70,9 +70,10 @@ public class Arena {
 
         // cyklus s bojem
         while (b1.nazivu() && b2.nazivu()) {
+            skritek.rozhodnuti=Skritek.random_int(2, 1);
             b1.utoc(b2);
             /**
-             * Rozhodnuti skřítka Škodíka
+             * Rozhodnuti skřítka Škodíka zda bude útočit/léčit
              */
             if (skritek.rozhodnuti == 1) {
                 s1.utoc(b1, kostka);
@@ -86,11 +87,12 @@ public class Arena {
             vykresli();
             vypisZpravu(b1.vratPosledniZpravu()); // zpráva o útoku
             vypisZpravu(b2.vratPosledniZpravu()); // zpráva o obraně                  
+            
             if (b2.nazivu()) {
                 /**
                  * Rozhodnuti skřítka Škodíka
                  */
-                if (skritek.rozhodnuti == 1) {
+                if (skritek.rozhodnuti == 2) {
                     s1.utoc(b1, kostka);
                     vykresli();
                     vypisZpravu(s1.vratPosledniZpravu()); // zpráva o útoku
