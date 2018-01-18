@@ -46,7 +46,7 @@
  * chceme specifikovat chovani konkretniho datoveho typu (dane jmenem rozhrani)
  * bez ohledu na konkretni implementaci chovani
  * chceme vyuzit vicenasobnou dedicnost
- *
+ * 
  * vyjimky
  * nezcykli se kdyz pri podmnince
  * throw jednoduche vyhozeni - pr u podminky
@@ -186,7 +186,10 @@
  * do promenne dam funkci a pak ji provolat jako funkci
  * mohu predavat jako parametr
  * mam kolekci lidi a chci je filtrovat lidi se jmenem s 5 znaky
- *
+ * 
+ * pretypovani priklad (napriklad mam sklad a mohu vec predavat do jineho mista - pobocky)
+ * Participants player = (Participants)participants.get(i)
+ * 
  * Udalost 
  * ceka az se neco stane - pr. klikne na neco
  * 
