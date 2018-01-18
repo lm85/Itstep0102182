@@ -89,20 +89,7 @@ public class Arena {
             vypisZpravu(b2.vratPosledniZpravu()); // zpráva o obraně                  
             
             if (b2.nazivu()) {
-                /**
-                 * Rozhodnuti skřítka Škodíka
-                 */
-                if (skritek.rozhodnuti == 2) {
-                    s1.utoc(b1, kostka);
-                    vykresli();
-                    vypisZpravu(s1.vratPosledniZpravu()); // zpráva o útoku
-                    vypisZpravu(b1.vratPosledniZpravu()); // zpráva o obraně
-                } else {
-                    s1.utoc(b1, kostka);
-                    vykresli();
-                    vypisZpravu(s1.vratPosledniZpravu()); // zpráva o útoku
-                    vypisZpravu(b1.vratPosledniZpravu()); // zpráva o obraně
-                }
+
                 b2.utoc(b1);
                 vykresli();
                 vypisZpravu(b2.vratPosledniZpravu()); // zpráva o útoku
