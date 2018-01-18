@@ -16,9 +16,37 @@
  * jedna trida muze vicero
  *
  * Abstraktni trida
- * je to trida a muzeme do ni napsat metody co nema a co maji obsahovat potomci
+ * je to trida a muzeme do ni napsat metody co ma a co maji obsahovat potomci
  * nemusime vsechny metody implementovat
- * 
+ * nutno pak vse overridovat
+ * NELZE V NI UDELAT INSTANCI
+ * Abstract Methods and Classes
+ * An abstract class is a class that is declared abstract—it may
+ * or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+ * An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:
+ * abstract void moveTo(double deltaX, double deltaY);
+ * If a class includes abstract methods, then the class itself must be declared abstract, as in:
+ * pokud dedim od predka, tak vzdy k nim mam pristup pokud bude protected, ma pristup
+ * odvozene tridy vyzaduji pristup na polozky co nejsou public
+ *
+ * public abstract class GraphicObject {
+ *  // declare fields
+ *  // declare nonabstract methods
+ *  abstract void draw();
+ * }
+ * When an abstract class is subclassed, 
+ * the subclass usually provides implementations for all of the abstract methods 
+ * in its parent class. However, if it does not, then the subclass must also be declared abstract.
+ * Note: Methods in an interface (see the Interfaces section) 
+ * that are not declared as default or static are implicitly abstract, 
+ * so the abstract modifier is not used with interface methods. (It can be used, but it is unnecessary.)   
+ *
+ * Rozhrani
+ * chovani bude implementovano v jinych, nesouvisejicich tridach
+ * chceme specifikovat chovani konkretniho datoveho typu (dane jmenem rozhrani)
+ * bez ohledu na konkretni implementaci chovani
+ * chceme vyuzit vicenasobnou dedicnost
+ *
  * vyjimky
  * nezcykli se kdyz pri podmnince
  * throw jednoduche vyhozeni - pr u podminky
@@ -117,8 +145,9 @@
  * nenajde metodu stejné signatury v předkovi. 
  * Díky použití této anotace chráníte vlastní kód před těžko detekovatelnými chybami.
  * !!! bereme Metodu uz prepsanou tzn. aktualni !!!
+ * pak v metode nepouzivame add ale super() - kdyz ji pouzijeme, musime overridovat 
+ * pokud pouziji final, tak beru neoverridovou metodu
  * 
- *
  * Seznamy
  * musi byt objektovy int
  * List<Integer> cisla = new arrayList<>();
