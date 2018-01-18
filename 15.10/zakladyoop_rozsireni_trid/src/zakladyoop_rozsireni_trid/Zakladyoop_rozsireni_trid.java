@@ -18,6 +18,13 @@
  * Abstraktni trida
  * je to trida a muzeme do ni napsat metody co ma a co maji obsahovat potomci
  * nemusime vsechny metody implementovat
+ * /**
+ * Necha zamestnance pracovat.
+ * Tato metoda je abstraktni - nema telo, jeji implementace bude vynucena
+ * v prvni neabstraktni tride, ktera oddedi tuto tridu.
+ */
+ /*
+ * public abstract void work();
  * nutno pak vse overridovat
  * NELZE V NI UDELAT INSTANCI
  * Abstract Methods and Classes
