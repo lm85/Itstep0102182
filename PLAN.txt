@@ -160,4 +160,20 @@ chybi dodelat tahovy boj a chybi dodelat rozdeleni do flotil dle zadani kolik ma
 dostali jsme ukol hamurabiho... 
 posilam tahovy boj na kontrolu - neco je tam blbe - nezachovava si hodnotu promenne... 
 
+16.1 skola
+totalni propadak neslo mi to...
+ke konci jsem se snazil dostat do tahoveho boje, ale uz jsem se nechytal
+
+18.1 doma 
+uprava tahoveho boje, 
+skritek jak leci, tak i zrani, mel jsem spatny random - randomoval v double misto int pouzit nextint a nezapomenout ze random musi mit -1 zatim ma skritek jen 2 stavy utoc a lec
+upraveny hlasky zpet
+???
+lecit na konci branse - obrany
+???
+
+
+
+
+
 
