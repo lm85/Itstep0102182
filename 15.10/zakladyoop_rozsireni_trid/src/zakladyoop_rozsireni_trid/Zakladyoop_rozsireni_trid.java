@@ -107,6 +107,18 @@
  * struktury pro ukladani vice prvku
  * Pole
  * 
+ * Proč používat anotaci @Override  
+ * Jednou z nejužitečnějších anotací, kterou představila Jave 1.5, 
+ * je bezesporu anotace @Override. Tuto anotaci je důležité použít pokaždé, 
+ * když překrýváte metodu, kterou deklaruje předek vaší třídy. 
+ * Díky tomu budete kompilátorem upozorněni, 
+ * a to ne varováním jak si mnozí mylně domývají, 
+ * ale rovnou kompilační chybou, ve chvíli kdy kompilátor 
+ * nenajde metodu stejné signatury v předkovi. 
+ * Díky použití této anotace chráníte vlastní kód před těžko detekovatelnými chybami.
+ * !!! bereme Metodu uz prepsanou tzn. aktualni !!!
+ * 
+ *
  * Seznamy
  * musi byt objektovy int
  * List<Integer> cisla = new arrayList<>();
