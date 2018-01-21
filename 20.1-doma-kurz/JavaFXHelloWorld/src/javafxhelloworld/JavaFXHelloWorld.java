@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author ASUS
+ * @author Milan Zlamal
  */
 public class JavaFXHelloWorld extends Application {
     
