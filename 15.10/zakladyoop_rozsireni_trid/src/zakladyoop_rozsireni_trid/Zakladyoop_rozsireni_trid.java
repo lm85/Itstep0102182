@@ -22,8 +22,15 @@
  * nema navratovy typ
  * V kodu je to prave ta metoda, ktera se zavola pri pouziti new
  * Nejcasteji se definujeme hodnoty privatnich atributu a provadime pripadne dalsi inicializace
- * Pokud zadny nedefinujeme, vytvari se a vola
+ * Pokud zadny nedefinujeme, predpoklada se ze tam je prazdny konstruktor
  * musi se jmenovat jako trida
+ * pokud nechci mit parametry dle vyberu, pak pretizim metodu
+ * priklad:
+ * private String jmeno;
+ * private int vek;
+ * public Clovek(String jmeno, int vek){this.jmeno = jemno; this.vek = vek;}
+ *  
+ *
  * 
  * Kolekce
  * Kolekce je kontejner podobných objektů. 
