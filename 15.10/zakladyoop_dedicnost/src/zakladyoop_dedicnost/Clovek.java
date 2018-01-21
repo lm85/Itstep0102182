@@ -50,7 +50,7 @@ public class Clovek {
      ***
      */
     
-    // konstruktor
+    // konstruktor (private - zakaze vytvareni novych instanci)
     public Clovek(String jmeno, int vek) {
         //this pouzijeme pro rozliseni atributu a parametru metody
         this.jmeno = jmeno;
