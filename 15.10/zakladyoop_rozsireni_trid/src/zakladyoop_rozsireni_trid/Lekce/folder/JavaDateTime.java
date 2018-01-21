@@ -2,15 +2,23 @@ package zakladyoop_rozsireni_trid.Lekce.folder;
 
 /*
  * https://www.itnetwork.cz/java/oop/datum-a-cas-v-jave-8-vytvareni-a-formatovani
+ * https://www.itnetwork.cz/java/oop/datum-a-cas-v-jave-8-uprava-a-intervaly
+ * https://www.itnetwork.cz/java/oop/datum-a-cas-v-jave-8-parsovani-a-porovnavani
+ * https://www.itnetwork.cz/java/oop/java-tutorial-diar-arraylist
+ * https://www.itnetwork.cz/java/oop/java-tutorial-diar-arraylist-dokonceni
+ *
+ * diar s databazi jako tato clasa
  */
 
-
+/*
+* pro okomentovane priklady
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+*/
 
 /**
  *
@@ -294,5 +302,98 @@ System.out.println(lokalniDatumCas);
 *                      kde přijímá počet dní místo sekund.
 *    toEpochSecond() a toEpochDay() - Metody opačné ke dvěma předchozím, převádí hodnotu na počet sekund/dní od roku 1970.
 */
+
+    private JavaDateTime datumCas;
+    private String text;
+
+    public JavaDateTime(JavaDateTime datumCas, String text) {
+        this.datumCas = datumCas;
+        this.text = text;
+    }
+
+    public JavaDateTime getDatumCas() {
+        return datumCas;
+    }
+
+    public void setDatumCas(JavaDateTime datumCas) {
+        this.datumCas = datumCas;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    @Override
+    public String toString() {
+        return datumCas + " " + text;
+    }
+
+    /* 
+    * pridat "databazi" class
+    *
+    import java.util.ArrayList;
+
+public class Databaze {
+
+    private ArrayList<Zaznam> zaznamy;
+
+    public Databaze() {
+        zaznamy = new ArrayList<>();
+    }
+
+} 
+    *
+    * Dodejme třídě metody pro přidání, vymazání a vyhledání záznamu.
+    * vyhledání záznamu.
+    * 
+    public void pridejZaznam(Calendar datumCas, String text) {
+        zaznamy.add(new Zaznam(datumCas, text));
+}
+    * 
+    public ArrayList<Zaznam> najdiZaznamy(Calendar datum, boolean dleCasu) {
+        ArrayList<Zaznam> nalezene = new ArrayList<>();
+        for (Zaznam z : zaznamy) {
+                if (((dleCasu) && (z.getDatumCas().equals(datum))) // dle času a data
+                        ||
+                ((!dleCasu) && // pouze dle data
+                        (z.getDatumCas().get(Calendar.DAY_OF_MONTH) == datum.get(Calendar.DAY_OF_MONTH)) &&
+                        (z.getDatumCas().get(Calendar.MONTH) == datum.get(Calendar.MONTH))) &&
+                        (z.getDatumCas().get(Calendar.YEAR) == datum.get(Calendar.YEAR))
+                )
+                   nalezene.add(z);
+        }
+        return nalezene;
+}
+    * Nakonec přidáme vymazání záznamů v určitou dobu. To provedeme pomocí metody najdiZaznamy() 
+    * a nalezené záznamy jednoduše proiterujeme a z ArrayListu odstraníme. 
+    * Budeme mazat podle přesného data i času, 2. parametr u metody najdiZaznamy() bude tedy true:
+    * 
+public void vymazZaznamy(Calendar datum) {
+        ArrayList<Zaznam> nalezeno = najdiZaznamy(datum, true);
+        for (Zaznam z : nalezeno) {
+                zaznamy.remove(z);
+        }
+}
+    * 
+    import java.util.Scanner;
+
+public class Diar {
+
+        private Databaze databaze;
+        private Scanner sc = new Scanner(System.in, "Windows-1250");
+
+        public Diar() {
+                databaze = new Databaze();
+        }
+
+}
+    * atd. viz projekt 
+    */
+    
+    
     
 }
