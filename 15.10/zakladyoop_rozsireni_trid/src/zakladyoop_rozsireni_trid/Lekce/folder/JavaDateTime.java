@@ -160,7 +160,139 @@ zacatek = zacatek.withHour(10); // Nastaví hodiny na 10
 LocalDate zacatek = LocalDate.of(1939, 9, 1);
 zacatek = zacatek.withMonth(9).withDayOfMonth(31);    
 * 
-*    
+* Čtení hodnoty
+* Hodnotu čteme pomocí metod začínajících na get*(), zde nás ani nic nepřekvapí:
+*
+LocalDate halloween = LocalDate.of(2016, Month.OCTOBER, 31);
+System.out.println("Rok: " + halloween.getYear() + ", měsíc: " + halloween.getMonthValue() + ", den: " + halloween.getDayOfMonth());    
+*
+* Parsování data a času
+* Datum a čas budeme samozřejmě často dostávat v textové podobě, např. od uživatele z konzole, ze souboru nebo z databáze. 
+* Asi tušíte, že k vytvoření LocalDateTime z takovéto textové hodnoty použijeme metodu parse() přímo na datovém typu, jako to v Javě děláme vždy.
+*
+* Ta výchozí předpokládá datum ve formátu yyyy-mm-dd, datum a čas ve formátu yyyy-mm-ddThh:mm:ss a čas ve formátu hh:mm:ss. 
+* Všechna čísla před sebou musí mít nuly, pokud jsou menší jak 10. T není překlep, ale opravdu oddělení data a času. Zkusme si to:
+*
+LocalDateTime datumCas = LocalDateTime.parse("2016-12-08T10:20:30");
+LocalDate datum = LocalDate.parse("2016-12-08");
+LocalTime cas = LocalTime.parse("10:20:30");
+*
+System.out.println(datumCas.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
+System.out.println(datum.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)));
+System.out.println(cas.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM)));
+*
+* Výsledek:
+*
+* 8.12.2016 10:20:30
+* 8.12.2016
+* 10:20:30
+*
+* Vlastní formát
+*
+* Mnohem často budeme ale samozřejmě chtít naparsovat datum a čas v českém tvaru nebo v jakémkoli jiném tvaru, výchozí oddělování data a času pomocí písmene "T" není zrovna user-friendly :)
+*
+LocalDateTime datumCas = LocalDateTime.parse("12/08/2016 10:20:30", DateTimeFormatter.ofPattern("M/d/y HH:mm:ss"));
+LocalDate datum = LocalDate.parse("12/8/2016", DateTimeFormatter.ofPattern("M/d/y"));
+LocalTime cas = LocalTime.parse("10:20:30", DateTimeFormatter.ofPattern("H:m:ss"));
+*
+System.out.println(datumCas.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
+System.out.println(datum.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)));
+System.out.println(cas.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM)));
+*
+* Výsledek:
+*
+* 8.12.2016 10:20:30
+* 8.12.2016
+* 10:20:30
+*
+* Porovnávání instancí
+* 
+* Protože Java nepodporuje přetěžování operátorů, porovnáváme datumy (píší schválně češtinsky nesprávně, 
+* daty je v IT zavádějící slovo) pomocí metod k tomu určených. Začínají is*(), vyjmenujme si je:
+*
+*    isAfter(datum) - Vrací zda je instance za datem/datem a časem předávané instance (zda je hodnota větší).
+*    isBefore(datum) - Vrací zda je instance před datem/datem a časem předávané instance (zda je hodnota menší).
+*    isEqual(datum) - Vrací, zda je instance nastavena na stejný datum a/nebo čas jako je předávaná instance (zda je hodnota stejná).
+*
+* To bylo jednoduché, že? Když už jsme u is*() metod, uveďme si i zbývající 2:
+*
+*    isLeapYear() - Vrací zda je instance nastavena na přestupný rok či nikoli.
+*    isSupported(Chro­noUnit) - Vrací zda instance podporuje práci s danou chrono jednotkou (např. LocalDate nebude umět ChronoUnit.HOURS, protože neobsahuje informaci o čase).
+*
+* Ukažme si příklad:
+*
+LocalDate halloween = LocalDate.of(2016, 10, 31);
+LocalDate vanoce = LocalDate.of(2016, 12, 25);
+System.out.println("po: " + halloween.isAfter(vanoce));
+System.out.println("před: " + halloween.isBefore(vanoce));
+System.out.println("shodný: " + vanoce.isEqual(halloween));
+System.out.println("shodný: " + halloween.isEqual(halloween));
+System.out.println("přestupný: " + halloween.isLeapYear());
+System.out.println("přestupný: " + halloween.withYear(2017).isLeapYear());
+System.out.println("podporuje hodiny: " + halloween.isSupported(ChronoUnit.HOURS));
+System.out.println("podporuje roky: " + halloween.isSupported(ChronoUnit.YEARS));
+*
+* Výsledek:
+*
+* Konzolová aplikace po: false
+* před: true
+* shodný: false
+* shodný: true
+* přestupný: true
+* přestupný: false
+* podporuje hodiny: false
+* podporuje roky: true
+*
+* Další třídy
+*
+* Kromě LocalDateTime, LocalDate a LocalTime se můžete setkat také s několika dalšími třídami, 
+* které využijete spíše u aplikací, které jsou na práci s datem a časem založené. 
+* Nelekejte se jich, ve většině případů si vystačíte s LocalDateTime, ale měli byste o nich mít povědomí.
+* Instant
+*
+* Instant je datum a čas, ale ne v pojetí kalendáře a přechodů na letní čas. 
+* Je to počet nanosekund od 1.1.1970, tedy jeden bod na časové ose UTC (univerzálního času). 
+* Když si kdekoli na Zemi napíšete aplikaci s tímto kódem:
+*
+Instant ted = Instant.now();
+System.out.println(ted);
+*
+* Vypíše vždy to samé, Instant zná jen univerzální čas a ten se bude lišit od reálného času v dané oblasti.
+* OffsetDateTime a ZonedDateTime
+*
+* Již víme, že Instant je univerzální čas a LocalDateTime má v sobě ten čas, který je na daném území. 
+* Ze samotného LocalDateTime nedokážeme získat bod na univerzální časové ose, protože nevíme na jakém je území.
+*
+* Co nám chybí je tedy kombinace těchto dvou, lokálně korektní čas, 
+* který by v sobě zároveň nesl informaci o území (časové zóně) 
+* a tím pádem mohl být univerzálně převáděn mezi různými časovými zónami. Právě k tomu slouží třída ZonedDateTime.
+*
+* V Javě nalezneme také třídu OffsetDateTime, která je takový mezičlánek, 
+* který umožňuje zaznamenat časový posun, ale nemá plnou podporu zón.
+* ZoneId
+*
+* Časové zóny jsou v Javě reprezentovány třídou ZoneId. Pojďme si udělat jednoduchou ukázku jak vytvoříme datum s časovou zónou:
+*
+ZonedDateTime lokalniDatumCas = ZonedDateTime.now(ZoneId.of("America/New_York"));
+System.out.println(lokalniDatumCas);
+*
+* Výstup:
+*
+* 2017-02-02T06:37:11.026-05:00[America/New_York]
+*
+* Ano, je to hodně tříd, berte to spíše jako informace, ke kterým se vrátíte až je budete potřebovat. 
+* V Javě je tříd vždy více než v ostatních jazycích, zkusme si vypěstovat trpělivost a nějakou odolnost vůči této skutečnosti, 
+* zas jsme kvůli tomu lépe placení :) Příště budeme zas chvíli prakticky programovat, abychom si od teorie odpočinuli.
+* Epochy
+*
+* Na úplný závěr si pojďme ještě představit několik posledních metod na LocalDateTime.
+*
+*    ofEpochSecond() - Statická metoda nám umožňuje vytvořit datum a čas z tzv. Linux timestamp, 
+*                      ve kterém se datum a čas často ukládal zejména v minulosti. 
+*                      Je to velké číslo označující počet vteřin od 1.1.1970 (začátek linuxové epochy), 
+*                      musíme uvést i nanosekundy (většinou 0) a časovou zónu, což je nejčastěji ZoneOffset.UTC. Metoda je dostupná i na LocalDate jako ofEpochDay(), 
+*                      kde přijímá počet dní místo sekund.
+*    toEpochSecond() a toEpochDay() - Metody opačné ke dvěma předchozím, převádí hodnotu na počet sekund/dní od roku 1970.
 */
     
 }
