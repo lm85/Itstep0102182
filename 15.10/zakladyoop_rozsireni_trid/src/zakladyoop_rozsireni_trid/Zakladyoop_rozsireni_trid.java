@@ -45,7 +45,15 @@
  * viz trida Kolekce zde
  *
  * Lambda funkce v jave to jsou streamy
- * 
+ * @FunctionalInterface 
+ * interface Operace {double proved(double a);}
+ * // vytvorime instanci
+ * Operace mocnina =(a)->{return a*a;};
+ * //muzeme zjednodusit
+ * operace mocnina= a->a*a;
+ * //prakticke vyuziti
+ * lide.stream().filter(c-> c.getJmeno().lenght() > 5). collect(Collectors.toList());
+ *
  * Abstraktni trida
  * zastresuje jine neabstraktnich trid, neni dokoncena, je to mix tridy a rozhrani
  * je to trida a muzeme do ni napsat metody co ma a co maji obsahovat potomci
