@@ -17,7 +17,7 @@ public class Auto {
     public void vyloz(int vyloz) {
         nalozeno-=vyloz;
         // maximalni nalozeni je 30 tun
-        if (nalozeno <0){
+        if (nalozeno <=0){
             System.out.println("Chcete vylozit nenalozene" + nalozeno);
             // protoze nejde vykladat do minusu, pridame paletu
             nalozeno=0;
