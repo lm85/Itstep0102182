@@ -172,7 +172,9 @@ upraveny hlasky zpet
 lecit na konci branse - obrany
 ???
 
-
+21.1 nedelni kurz
+dodelal jsem si do projektu zakladyoop_rozsireni_trid kolekce
+priklad u mne na gitu v adresari Kolekce - jsou tam i testy
 
 
 
