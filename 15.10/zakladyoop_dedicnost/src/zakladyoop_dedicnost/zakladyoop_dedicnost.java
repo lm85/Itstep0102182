@@ -35,6 +35,22 @@
  jinak se vola v mainu
  getter a setter - metoda ktera nam pomaha brat hodnotu z privite atributu
 
+ pretezovani  (přetěžování)
+ pretezujeme funkce i metody a podle toho co tam dam - nejen vstupni parametry, ale i ty co tam dam
+ ta sama metoda ma 
+ proc:
+ Když už se tu o tom bavíte, došlo mi že mi něco uniklo. Když u vlastní třídy nepřetížím operátor, co se vlastně porovnává ?
+ class Clovek{public int vek;}
+ main()
+ {
+  Clovek p1=new Clovek(){vek=8;}
+  Clovek p2=new Clovek() {vek=18}
+
+  if(p1==p2) Console.WriteLine("Bazinga");
+ }
+ Identita, tedy zda je to ten samý objekt.
+
+
  Polymorfismus
  tam kde cekam instanci tridy, tak dodam potomka, 
  nemohu ale pouzit to co nema otcovska trida 
@@ -45,6 +61,11 @@
  umoznuje definovat ruzne chovani instanci, 
  ale zachazet s nimi pod jednim spolecnym rozhranim
  
+Deklarace metody v Javě je tedy následující:
+[modifikátor přístupu] [návratový typ] [jmenoMetody]([parametry])
+
+
+
  Metody spolecne pro vsechny objekty ci reakce na udalosti:
  instance (konstruktor)
  prevod na text
