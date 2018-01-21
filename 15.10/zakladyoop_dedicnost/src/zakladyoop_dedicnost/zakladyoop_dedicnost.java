@@ -36,8 +36,27 @@
  getter a setter - metoda ktera nam pomaha brat hodnotu z privite atributu
 
  pretezovani  (přetěžování)
- pretezujeme funkce i metody a podle toho co tam dam - nejen vstupni parametry, ale i ty co tam dam
- ta sama metoda ma 
+ pretezujeme funkce i metody a podle toho co tam dam - nejen vstupni parametry, 
+ == pokud pretizim metodu, pak v teto tride pouzivam pretizenou metodu dle toho co dam do zavorky:
+ nakresli(hodnota) - u desetinych ide si rozlisi zda 3,14 nutno dat 3,14f jinak je double
+ implementace:
+ public class KreslicDat {
+	...
+	public void nakresli(String s) {
+		...
+	}
+	public void nakresli(int i) {
+		...
+	}
+	public void nakresli(double f) {
+		...
+	}
+	public void nakresli(int i, double f) {
+		...
+	}
+}
+ Poznámka: Přetížené metody by se měly používat šetrně, protože jejich použití činí kód obtížně čitelný.
+ http://programujte.com/clanek/2007082501-java-tutorial-objekty-a-tridy-7-dil/
  proc:
  Když už se tu o tom bavíte, došlo mi že mi něco uniklo. Když u vlastní třídy nepřetížím operátor, co se vlastně porovnává ?
  class Clovek{public int vek;}
