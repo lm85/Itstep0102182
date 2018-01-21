@@ -44,6 +44,8 @@
  * S kolekcemi se pracuje jednodušeji než s poli.
  * viz trida Kolekce zde
  *
+ * Lambda funkce v jave to jsou streamy
+ * 
  * Abstraktni trida
  * zastresuje jine neabstraktnich trid, neni dokoncena, je to mix tridy a rozhrani
  * je to trida a muzeme do ni napsat metody co ma a co maji obsahovat potomci
@@ -228,9 +230,10 @@
  *  - pri praci s kolekcema
  * 
  * Generika
+ * pomoci <T> definuji datovy typ a pak ji dovytvarim
  * mohu si udelat generickou tridu a pracuji s ni jako s existujicim typem
  * po dosazeni cloveka se mi pak dosadi vsude
- * 
+ * class Trida<T>{private T ...}
  * 
  * Funkcionalni programovani
  * zaklad:
