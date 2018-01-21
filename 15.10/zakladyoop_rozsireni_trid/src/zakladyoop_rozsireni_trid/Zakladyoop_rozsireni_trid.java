@@ -29,9 +29,14 @@
  * private String jmeno;
  * private int vek;
  * public Clovek(String jmeno, int vek){this.jmeno = jemno; this.vek = vek;}
- *  
+ * private - zakaze vytvareni novych instanci
  *
+ * Getter setter
+ * u booleanu pouzivam zacatek nazvu "Is"
  * 
+ * Dedicnost 
+ * super - volame konstructor predka
+ *
  * Kolekce
  * Kolekce je kontejner podobných objektů. 
  * Preferujte kolekce před poli. 
