@@ -36,6 +36,7 @@
  * 
  * Dedicnost 
  * super - volame konstructor predka
+ * pokud z niceho nendedim, pak dedim z metody object
  *
  * Kolekce
  * Kolekce je kontejner podobných objektů. 
@@ -119,6 +120,11 @@
  * nelze override
  * lze tridu - final class nemohu pa dedit
  * 
+ * Prepisovani metody
+ * v jave muzeme jakoukoliv metodu prepsat za pomoci super
+ * nezapomenout u tridy extend
+ * potom je nutno @Override
+ * 
  * PAMET
  * Hodnotove datove typy
  * pevna velikost
@@ -181,6 +187,7 @@
  * Díky použití této anotace chráníte vlastní kód před těžko detekovatelnými chybami.
  * !!! bereme Metodu uz prepsanou tzn. aktualni !!!
  * pak v metode nepouzivame add ale super() - kdyz ji pouzijeme, musime overridovat 
+ * volam pouze primeho predka
  * pokud pouziji final, tak beru neoverridovou metodu
  * 
  * Seznamy

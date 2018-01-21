@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package zakladyoop_rozsireni_trid;
+package zakladyoop_rozsireni_trid.Lekce.folder;
 
 import java.util.Collections;
 
