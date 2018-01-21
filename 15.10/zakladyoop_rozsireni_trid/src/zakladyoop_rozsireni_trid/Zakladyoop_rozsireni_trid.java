@@ -122,7 +122,8 @@
  * final slouzi k zabraneni dalsiho prepisu nebo dedicnosti 
  * nelze override
  * lze tridu - final class nemohu pa dedit
- * 
+ * final lze pouzit u trid ci metod a muze existovat nezavisle na static 
+ *
  * Prepisovani metody
  * v jave muzeme jakoukoliv metodu prepsat za pomoci super
  * nezapomenout u tridy extend
