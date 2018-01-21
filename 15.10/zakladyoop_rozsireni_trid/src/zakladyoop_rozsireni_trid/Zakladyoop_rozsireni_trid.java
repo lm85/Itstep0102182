@@ -45,8 +45,11 @@
  * viz trida Kolekce zde
  *
  * Abstraktni trida
+ * zastresuje jine neabstraktnich trid, neni dokoncena, je to mix tridy a rozhrani
  * je to trida a muzeme do ni napsat metody co ma a co maji obsahovat potomci
  * nemusime vsechny metody implementovat
+ * abstract class Clovek {
+ * public abstract void vypisPovolani()}
  * /**
  * Necha zamestnance pracovat.
  * Tato metoda je abstraktni - nema telo, jeji implementace bude vynucena
@@ -125,6 +128,11 @@
  * nezapomenout u tridy extend
  * potom je nutno @Override
  * 
+ * Interface
+ * predpis metod, ktere ma implementovat a mit trida
+ * interface Pracuji {
+ * void Pracuj}
+ *
  * PAMET
  * Hodnotove datove typy
  * pevna velikost
