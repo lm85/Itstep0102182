@@ -14,6 +14,22 @@
  *
  * rozhrani predepisuje metody co musime doimplementovat ve tride ktera je pouziva, 
  * jedna trida muze vicero
+ * 
+ * Konstruktor
+ * nema navratovy typ nepise se void - tim new se odkazuje na instanci, proto 
+ * Metoda, ktera se zavola ve chvili vytvareni instance objektu
+ * muze a nemusi mit parametry
+ * nema navratovy typ
+ * V kodu je to prave ta metoda, ktera se zavola pri pouziti new
+ * Nejcasteji se definujeme hodnoty privatnich atributu a provadime pripadne dalsi inicializace
+ * Pokud zadny nedefinujeme, vytvari se a vola
+ * musi se jmenovat jako trida
+ * 
+ * Kolekce
+ * Kolekce je kontejner podobných objektů. 
+ * Preferujte kolekce před poli. 
+ * S kolekcemi se pracuje jednodušeji než s poli.
+ * viz trida Kolekce zde
  *
  * Abstraktni trida
  * je to trida a muzeme do ni napsat metody co ma a co maji obsahovat potomci
