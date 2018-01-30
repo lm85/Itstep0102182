@@ -51,6 +51,12 @@ public class Arena {
 
     /**
      * Simuluje zápas bojovníků
+     * obsahuje cyklus s bojem a rozhodnuti skritka zda bude skodit ci lecit
+     * mag utoci kouzly
+     * @see #skritek 
+     * @see #bojovnik1
+     * @see #bojovnik2
+     * @see #kostka
      */
     public void zapas() {
         // původní pořadí
@@ -88,6 +94,10 @@ public class Arena {
             vypisZpravu(b1.vratPosledniZpravu()); // zpráva o útoku
             vypisZpravu(b2.vratPosledniZpravu()); // zpráva o obraně                  
             
+            /* pokud je bojovnik2 naživu provede utok, 
+            * vykreslení stavu obou bojovníků
+            * a vypíše info o útoku a obraně
+            */
             if (b2.nazivu()) {
 
                 b2.utoc(b1);
@@ -99,6 +109,10 @@ public class Arena {
         }
     }
 
+    /* 
+    * Provede výpis počtu životů bojovníků a graficky znázorní
+    *
+    */
     private void vypisBojovnika(Bojovnik b) {
         System.out.println(b);
         System.out.print("Zivot: ");
@@ -111,7 +125,7 @@ public class Arena {
     }
 
     /**
-     * Vykreslí informační obrazovku
+     * Vykreslí informační obrazovku na začátku
      */
     private void vykresli() {
         System.out.println(""
@@ -130,6 +144,7 @@ public class Arena {
      * Vypíše zprávu do konzole s dramatickou pauzou
      *
      * @param zprava Zpráva
+     * @exception vrací informaci o tom že se nepodařilo uspat vlakno
      */
     private void vypisZpravu(String zprava) {
         System.out.println(zprava);
