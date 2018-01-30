@@ -6,7 +6,9 @@
 package dicebag;
 
 
+import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Scanner;
 
 
 /**
@@ -17,7 +19,7 @@ public class Die {
     private Random random;
     protected int faces;
     protected int withFaces;
-
+    protected int hod;
     
     /**
      * Vytvoří novou instanci hrací kostky
@@ -41,7 +43,7 @@ public class Die {
         random = new Random();
     }
 
-    
+
      /**
      * Vrátí počet stěn hrací kostky
      * @return počet stěn hrací kostky
@@ -50,6 +52,10 @@ public class Die {
     {
 
         return faces;
+    }
+
+    public void setHod(int hod) {
+        this.hod = hod;
     }
     
     

@@ -5,7 +5,9 @@
  */
 package dicebag;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,24 +20,30 @@ public class DiceBag {
      */
     public static void main(String[] args) {
         
+        
+        
         /*
         * Definujeme scanner input z klavesnice
-        */
+         */
         System.out.println("Zadej pocet sten");
         Scanner intScanner = new Scanner(System.in);
+
+        /*
+        * Klasicky for cyklus pro reseni osetreni vstupu
+        */
         
-        // zde throw exception - pozdeji dodelam
-        
-        
-        
-              
+
+            if (!intScanner.hasNextInt()) {
+                throw new InputMismatchException("Zadejte ciselnou hodnotu");
+            }
+        int choose = intScanner.nextInt();
+
         int roll = intScanner.nextInt();
-        
+        roll = choose;
+        System.out.println("Na " + roll + " stenne kostce padlo cislo: " + roll);
         // vytvoření objektů
         Die kostka = new Die(roll);
-        System.out.println("Na " + roll +" stenne kostce padlo cislo: " + roll);
-        
-        
     }
+    private static final Logger LOG = Logger.getLogger(DiceBag.class.getName());
 
 }
