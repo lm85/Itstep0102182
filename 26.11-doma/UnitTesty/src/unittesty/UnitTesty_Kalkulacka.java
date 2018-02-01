@@ -23,7 +23,7 @@ public class UnitTesty_Kalkulacka {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        //
     /*
     * Metody setUp() a tearDown(), přesněji metody s anotacemi 
     @Before a @After, 
